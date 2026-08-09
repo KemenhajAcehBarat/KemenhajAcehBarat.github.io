@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Standar Pelayanan | Kementerian Haji dan Umrah Kabupaten Aceh Barat</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f7faf8;
+      color: #17352f;
+      line-height: 1.7;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .topbar {
+      background: #123f35;
+      color: #fff;
+      padding: 9px 5%;
+      font-size: 13px;
+    }
+
+    header {
+      background: #fff;
+      border-bottom: 1px solid #e5ece9;
+    }
+
+    .nav {
+      max-width: 1180px;
+      margin: auto;
+      padding: 15px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand img {
+      width: 62px;
+      height: 62px;
+      object-fit: contain;
+    }
+
+    .brand h1 {
+      font-size: 17px;
+      line-height: 1.25;
+      color: #123f35;
+    }
+
+    .brand span {
+      font-size: 12px;
+      color: #66756f;
+    }
+
+    .menu {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .menu a:hover {
+      color: #b18020;
+    }
+
+    .back-button {
+      background: #123f35;
+      color: #fff;
+      padding: 10px 16px;
+      border-radius: 8px;
+    }
+
+    .back-button:hover {
+      background: #1c6252;
+    }
+
+    .hero {
+      background: linear-gradient(
+        120deg,
+        #123f35 0%,
+        #1c6252 55%,
+        #287866 100%
+      );
+      color: #fff;
+      text-align: center;
+      padding: 65px 24px;
+    }
+
+    .hero .label {
+      color: #f3d27f;
+      font-size: 13px;
+      font-weight: bold;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .hero h2 {
+      font-size: 38px;
+      line-height: 1.2;
+      margin-bottom: 14px;
+    }
+
+    .hero p {
+      max-width: 780px;
+      margin: auto;
+      color: #e9f3ef;
+      font-size: 16px;
+    }
+
+    .container {
+      max-width: 1050px;
+      margin: auto;
+      padding: 55px 24px;
+    }
+
+    .intro {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .intro h3 {
+      color: #123f35;
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    .intro p {
+      color: #687872;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .service-box {
+      background: #fff;
+      border: 1px solid #e1e9e5;
+      border-radius: 14px;
+      padding: 26px;
+      margin-bottom: 20px;
+      box-shadow: 0 5px 18px rgba(22,54,45,.05);
+    }
+
+    .service-box h3 {
+      color: #123f35;
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+
+    .service-box p {
+      color: #687872;
+      margin-bottom: 10px;
+    }
+
+    .service-box ul,
+    .service-box ol {
+      padding-left: 23px;
+      color: #687872;
+    }
+
+    .service-box li {
+      margin-bottom: 7px;
+    }
+
+    .number {
+      display: inline-flex;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: #123f35;
+      color: #fff;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      margin-right: 8px;
+    }
+
+    .notice {
+      background: #edf5f1;
+      border-left: 5px solid #d6a63c;
+    }
+
+    .notice h3 {
+      color: #123f35;
+    }
+
+    footer {
+      background: #0d3028;
+      color: #d9e7e2;
+      padding: 28px 5%;
+      text-align: center;
+      font-size: 13px;
+    }
+
+    footer h3 {
+      color: #f3d27f;
+      margin-bottom: 6px;
+    }
+
+    @media (max-width: 800px) {
+
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .menu {
+        flex-wrap: wrap;
+        gap: 14px;
+      }
+
+      .hero {
+        padding: 50px 20px;
+      }
+
+      .hero h2 {
+        font-size: 30px;
+      }
+
+      .container {
+        padding: 40px 18px;
+      }
+
+      .service-box {
+        padding: 21px;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="topbar">
+    Website Informasi dan Pelayanan Publik • Kabupaten Aceh Barat
+  </div>
+
+  <header>
+    <div class="nav">
+
+```
+  <div class="brand">
+
+    <img
+      src="logo-kementerian-haji-umrah.png"
+      alt="Logo Kementerian Haji dan Umrah"
+    >
+
+    <div>
+      <h1>Kementerian Haji dan Umrah</h1>
+      <span>Kabupaten Aceh Barat</span>
+    </div>
+
+  </div>
+
+  <nav class="menu">
+    <a href="index.html">Beranda</a>
+    <a href="profil.html">Profil</a>
+    <a href="layanan.html">Layanan</a>
+    <a href="index.html#berita">Informasi</a>
+    <a href="index.html#kontak">Kontak</a>
+    <a href="layanan.html" class="back-button">← Kembali</a>
+  </nav>
+
+</div>
+```
+
+  </header>
+
+  <section class="hero">
+
+```
+<div class="label">
+  STANDAR PELAYANAN PUBLIK
+</div>
+
+<h2>
+  Standar Pelayanan
+</h2>
+
+<p>
+  Informasi mengenai standar pelayanan publik
+  Kantor Kementerian Haji dan Umrah Kabupaten Aceh Barat.
+</p>
+```
+
+  </section>
+
+  <main class="container">
+
+```
+<div class="intro">
+
+  <h3>Standar Pelayanan Publik</h3>
+
+  <p>
+    Standar pelayanan merupakan pedoman dalam penyelenggaraan
+    pelayanan publik agar masyarakat memperoleh pelayanan yang
+    mudah, cepat, transparan, profesional, dan dapat dipertanggungjawabkan.
+  </p>
+
+</div>
+
+<section class="service-box">
+
+  <h3>
+    <span class="number">1</span>
+    Persyaratan Pelayanan
+  </h3>
+
+  <p>
+    Persyaratan pelayanan disesuaikan dengan jenis layanan yang
+    diajukan oleh masyarakat.
+  </p>
+
+  <ul>
+    <li>Mengisi formulir permohonan pelayanan.</li>
+    <li>Melampirkan dokumen persyaratan yang diperlukan.</li>
+    <li>Menyerahkan dokumen kepada petugas pelayanan.</li>
+    <li>Memastikan data dan dokumen yang disampaikan benar.</li>
+  </ul>
+
+</section>
+
+<section class="service-box">
+
+  <h3>
+    <span class="number">2</span>
+    Sistem, Mekanisme, dan Prosedur
+  </h3>
+
+  <ol>
+    <li>Masyarakat mengajukan permohonan pelayanan.</li>
+    <li>Petugas menerima dan memeriksa permohonan.</li>
+    <li>Petugas melakukan verifikasi dokumen.</li>
+    <li>Permohonan diproses sesuai ketentuan.</li>
+    <li>Hasil pelayanan disampaikan kepada pemohon.</li>
+  </ol>
+
+</section>
+
+<section class="service-box">
+
+  <h3>
+    <span class="number">3</span>
+    Jangka Waktu Pelayanan
+  </h3>
+
+  <p>
+    Waktu penyelesaian pelayanan disesuaikan dengan jenis layanan,
+    kelengkapan persyaratan, serta ketentuan yang berlaku.
+  </p>
+
+</section>
+
+<section class="service-box">
+
+  <h3>
+    <span class="number">4</span>
+    Biaya atau Tarif
+  </h3>
+
+  <p>
+    Informasi mengenai biaya atau tarif pelayanan akan disesuaikan
+    dengan ketentuan resmi yang berlaku pada masing-masing jenis layanan.
+  </p>
+
+</section>
+
+<section class="service-box">
+
+  <h3>
+    <span class="number">5</span>
+    Produk Pelayanan
+  </h3>
+
+  <p>
+    Produk pelayanan berupa informasi, dokumen, rekomendasi,
+    atau hasil layanan lainnya sesuai dengan jenis pelayanan
+    yang diberikan.
+  </p>
+
+</section>
+
+<section class="service-box">
+
+  <h3>
+    <span class="number">6</span>
+    Sarana dan Prasarana
+  </h3>
+
+  <ul>
+    <li>Ruang pelayanan.</li>
+    <li>Meja dan kursi pelayanan.</li>
+    <li>Media informasi pelayanan.</li>
+    <li>Fasilitas pendukung pelayanan.</li>
+    <li>Sarana pengaduan masyarakat.</li>
+  </ul>
+
+</section>
+
+<section class="service-box">
+
+  <h3>
+    <span class="number">7</span>
+    Kompetensi Petugas Pelayanan
+  </h3>
+
+  <p>
+    Petugas pelayanan melaksanakan tugas secara profesional,
+    ramah, transparan, responsif, dan sesuai dengan ketentuan
+    yang berlaku.
+  </p>
+
+</section>
+
+<section class="service-box">
+
+  <h3>
+    <span class="number">8</span>
+    Penanganan Pengaduan
+  </h3>
+
+  <p>
+    Masyarakat dapat menyampaikan kritik, saran, pertanyaan,
+    dan pengaduan melalui sarana pengaduan yang disediakan
+    oleh Kantor Kementerian Haji dan Umrah Kabupaten Aceh Barat.
+  </p>
+
+</section>
+
+<section class="service-box">
+
+  <h3>
+    <span class="number">9</span>
+    Evaluasi Kinerja Pelayanan
+  </h3>
+
+  <p>
+    Evaluasi pelayanan dilakukan secara berkala sebagai bagian
+    dari upaya peningkatan kualitas pelayanan publik kepada masyarakat.
+  </p>
+
+</section>
+
+<section class="service-box notice">
+
+  <h3>ℹ️ Catatan</h3>
+
+  <p>
+    Rincian persyaratan, waktu penyelesaian, biaya atau tarif,
+    serta produk pelayanan akan disesuaikan dengan Standar Pelayanan
+    resmi yang berlaku pada Kantor Kementerian Haji dan Umrah
+    Kabupaten Aceh Barat.
+  </p>
+
+</section>
+```
+
+  </main>
+
+  <footer>
+
+```
+<h3>Kementerian Haji dan Umrah</h3>
+
+<p>Kabupaten Aceh Barat</p>
+
+<p>Website Informasi dan Pelayanan Publik</p>
+```
+
+  </footer>
+
+</body>
+</html>
