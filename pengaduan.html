@@ -7,172 +7,151 @@
 <title>Pengaduan Masyarakat | Kementerian Haji dan Umrah Kabupaten Aceh Barat</title>
 
 <style>
-*{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
+* {
+    box-sizing: border-box;
 }
 
-body{
-    font-family:Arial,Helvetica,sans-serif;
-    background:#f5f7f6;
-    color:#173f36;
-    line-height:1.7;
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7f6;
+    color: #173f36;
 }
 
-.topbar{
-    background:#0d4036;
-    color:white;
-    padding:10px 5%;
-    font-size:15px;
+.topbar {
+    background: #0d4036;
+    color: white;
+    padding: 10px 5%;
 }
 
-header{
-    background:white;
-    padding:20px 5%;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    border-bottom:1px solid #e5e5e5;
+header {
+    background: white;
+    padding: 20px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
-.brand{
-    display:flex;
-    align-items:center;
-    gap:18px;
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
-.brand img{
-    width:78px;
-    height:78px;
-    object-fit:contain;
+.brand img {
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
 }
 
-.brand h1{
-    font-size:24px;
-    color:#0b4439;
+.brand h1 {
+    margin: 0;
+    font-size: 23px;
+    color: #0b4439;
 }
 
-.brand p{
-    color:#55736c;
-    font-size:16px;
+.brand p {
+    margin: 4px 0 0;
+    color: #55736c;
 }
 
-nav{
-    display:flex;
-    gap:28px;
-    flex-wrap:wrap;
+nav {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
-nav a{
-    color:#0b1715;
-    text-decoration:none;
-    font-weight:bold;
+nav a {
+    text-decoration: none;
+    color: #173f36;
+    font-weight: bold;
 }
 
-nav a:hover{
-    color:#c99624;
+nav a:hover {
+    color: #c99624;
 }
 
-.hero{
-    background:linear-gradient(135deg,#104c40,#237864);
-    color:white;
-    text-align:center;
-    padding:65px 5%;
+.hero {
+    background: linear-gradient(135deg, #104c40, #237864);
+    color: white;
+    text-align: center;
+    padding: 60px 5%;
 }
 
-.hero .label{
-    color:#f5c95c;
-    font-weight:bold;
-    letter-spacing:2px;
+.hero h2 {
+    margin: 10px 0;
+    font-size: 40px;
 }
 
-.hero h2{
-    font-size:42px;
-    margin:10px 0;
+.hero p {
+    font-size: 18px;
 }
 
-.hero p{
-    max-width:750px;
-    margin:auto;
-    color:#edf7f3;
+.container {
+    width: 92%;
+    max-width: 1000px;
+    margin: 40px auto;
 }
 
-.container{
-    width:92%;
-    max-width:1000px;
-    margin:45px auto;
+.info {
+    background: white;
+    padding: 25px;
+    border-left: 5px solid #dca82e;
+    border-radius: 10px;
+    margin-bottom: 25px;
 }
 
-.info{
-    background:white;
-    padding:25px;
-    border-left:5px solid #dca82e;
-    border-radius:12px;
-    margin-bottom:30px;
-    box-shadow:0 5px 20px rgba(0,0,0,.06);
+.info h3 {
+    color: #0d5143;
 }
 
-.info h3{
-    color:#0d5143;
-    margin-bottom:10px;
+.form-container {
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
 }
 
-.form-box{
-    background:white;
-    padding:20px;
-    border-radius:16px;
-    box-shadow:0 8px 25px rgba(0,0,0,.07);
+iframe {
+    width: 100%;
+    height: 1100px;
+    border: 0;
 }
 
-.form-box iframe{
-    width:100%;
-    min-height:1000px;
-    border:none;
+footer {
+    background: #0d4036;
+    color: white;
+    text-align: center;
+    padding: 30px 5%;
+    margin-top: 50px;
 }
 
-footer{
-    background:#0d4036;
-    color:white;
-    text-align:center;
-    padding:35px 5%;
-    margin-top:60px;
+footer h3 {
+    color: #f5c95c;
 }
 
-footer h3{
-    color:#f5c95c;
-    margin-bottom:8px;
-}
+@media (max-width: 700px) {
 
-footer p{
-    color:#dcebe6;
-}
-
-@media(max-width:800px){
-
-    header{
-        flex-direction:column;
-        align-items:flex-start;
-        gap:18px;
+    .brand h1 {
+        font-size: 20px;
     }
 
-    nav{
-        gap:15px;
+    nav {
+        width: 100%;
     }
 
-    .hero h2{
-        font-size:32px;
+    .hero h2 {
+        font-size: 30px;
     }
 
-    .form-box{
-        padding:8px;
-    }
-
-    .form-box iframe{
-        min-height:1100px;
+    iframe {
+        height: 1200px;
     }
 }
 </style>
+
 </head>
 
 <body>
@@ -198,70 +177,55 @@ alt="Logo Kementerian Haji dan Umrah">
 <nav>
 
 <a href="index.html">Beranda</a>
-
 <a href="profil.html">Profil</a>
-
 <a href="layanan.html">Layanan</a>
-
 <a href="pengaduan.html">Pengaduan</a>
-
 <a href="index.html#informasi">Informasi</a>
-
 <a href="index.html#kontak">Kontak</a>
 
 </nav>
 
 </header>
 
-
 <section class="hero">
 
-<div class="label">
-PELAYANAN PUBLIK
-</div>
-
-<h2>
-Pengaduan Masyarakat
-</h2>
+<h2>Pengaduan Masyarakat</h2>
 
 <p>
 Sampaikan pengaduan, kritik, saran, dan masukan
-untuk membantu meningkatkan kualitas pelayanan.
+terkait pelayanan Haji dan Umrah.
 </p>
 
 </section>
-
 
 <main class="container">
 
 <div class="info">
 
-<h3>Formulir Pengaduan Masyarakat</h3>
+<h3>Formulir Pengaduan</h3>
 
 <p>
-Silakan mengisi formulir pengaduan di bawah ini
-dengan informasi yang benar dan jelas.
+Silakan mengisi formulir pengaduan berikut dengan
+informasi yang benar dan jelas.
 </p>
 
 <p>
-Setiap pengaduan akan menjadi bahan evaluasi
-dalam peningkatan kualitas pelayanan kepada masyarakat.
+Pengaduan yang dikirim akan diterima melalui sistem
+Google Forms dan dapat dikelola oleh petugas.
 </p>
 
 </div>
 
-
-<div class="form-box">
+<div class="form-container">
 
 <iframe
-src="https://docs.google.com/forms/d/e/1FAIpQLScheObQZpJwfDgWgNOVXHM-nxSxlw4xNJmGJd4G56OkYm4UXA/viewform?embedded=true">
-Memuat formulir pengaduan...
+src="https://docs.google.com/forms/d/e/1FAIpQLScheObQZpJwfDgWgNOVXHM-nxSxlw4xNJmGJd4G56OkYm4UXA/viewform?embedded=true"
+loading="lazy">
 </iframe>
 
 </div>
 
 </main>
-
 
 <footer>
 
