@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Pengaduan Masyarakat | Kementerian Haji dan Umrah Kabupaten Aceh Barat</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f5f7f6;
+    color:#173f36;
+    line-height:1.7;
+}
+
+.topbar{
+    background:#0d4036;
+    color:white;
+    padding:10px 5%;
+    font-size:15px;
+}
+
+header{
+    background:white;
+    padding:20px 5%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    border-bottom:1px solid #e5e5e5;
+}
+
+.brand{
+    display:flex;
+    align-items:center;
+    gap:18px;
+}
+
+.brand img{
+    width:78px;
+    height:78px;
+    object-fit:contain;
+}
+
+.brand h1{
+    font-size:24px;
+    color:#0b4439;
+}
+
+.brand p{
+    color:#55736c;
+    font-size:16px;
+}
+
+nav{
+    display:flex;
+    gap:28px;
+    flex-wrap:wrap;
+}
+
+nav a{
+    color:#0b1715;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#c99624;
+}
+
+.hero{
+    background:linear-gradient(135deg,#104c40,#237864);
+    color:white;
+    text-align:center;
+    padding:65px 5%;
+}
+
+.hero .label{
+    color:#f5c95c;
+    font-weight:bold;
+    letter-spacing:2px;
+}
+
+.hero h2{
+    font-size:42px;
+    margin:10px 0;
+}
+
+.hero p{
+    max-width:750px;
+    margin:auto;
+    color:#edf7f3;
+}
+
+.container{
+    width:90%;
+    max-width:850px;
+    margin:50px auto;
+}
+
+.info{
+    background:white;
+    padding:25px;
+    border-left:5px solid #dca82e;
+    border-radius:12px;
+    margin-bottom:30px;
+    box-shadow:0 5px 20px rgba(0,0,0,.06);
+}
+
+.info h3{
+    color:#0d5143;
+    margin-bottom:10px;
+}
+
+.form-box{
+    background:white;
+    padding:35px;
+    border-radius:16px;
+    box-shadow:0 8px 25px rgba(0,0,0,.07);
+}
+
+.form-box h3{
+    color:#0d5143;
+    font-size:27px;
+    margin-bottom:25px;
+}
+
+.form-group{
+    margin-bottom:20px;
+}
+
+label{
+    display:block;
+    font-weight:bold;
+    margin-bottom:7px;
+    color:#244b43;
+}
+
+input,
+select,
+textarea{
+    width:100%;
+    padding:13px 15px;
+    border:1px solid #cfdad6;
+    border-radius:8px;
+    font-size:15px;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+    outline:none;
+    border-color:#237864;
+}
+
+textarea{
+    min-height:150px;
+    resize:vertical;
+}
+
+.required{
+    color:#b33b2e;
+}
+
+.note{
+    font-size:13px;
+    color:#697a75;
+    margin-top:6px;
+}
+
+button{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:8px;
+    background:#0d5143;
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#176653;
+}
+
+footer{
+    background:#0d4036;
+    color:white;
+    text-align:center;
+    padding:35px 5%;
+    margin-top:60px;
+}
+
+footer h3{
+    color:#f5c95c;
+    margin-bottom:8px;
+}
+
+footer p{
+    color:#dcebe6;
+}
+
+@media(max-width:800px){
+
+    header{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:18px;
+    }
+
+    nav{
+        gap:15px;
+    }
+
+    .hero h2{
+        font-size:32px;
+    }
+
+    .form-box{
+        padding:25px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="topbar">
+    Website Informasi dan Pelayanan • Kabupaten Aceh Barat
+</div>
+
+
+<header>
+
+<div class="brand">
+
+<img src="logo-kementerian-haji-umrah.png"
+alt="Logo Kementerian Haji dan Umrah">
+
+<div>
+<h1>Kementerian Haji dan Umrah</h1>
+<p>Kabupaten Aceh Barat</p>
+</div>
+
+</div>
+
+
+<nav>
+
+<a href="index.html">Beranda</a>
+
+<a href="profil.html">Profil</a>
+
+<a href="layanan.html">Layanan</a>
+
+<a href="pengaduan.html">Pengaduan</a>
+
+<a href="index.html#informasi">Informasi</a>
+
+<a href="index.html#kontak">Kontak</a>
+
+</nav>
+
+</header>
+
+
+<section class="hero">
+
+<div class="label">
+PELAYANAN PUBLIK
+</div>
+
+<h2>
+Pengaduan Masyarakat
+</h2>
+
+<p>
+Sampaikan pengaduan, kritik, saran, dan masukan
+untuk membantu meningkatkan kualitas pelayanan.
+</p>
+
+</section>
+
+
+<main class="container">
+
+
+<div class="info">
+
+<h3>Petunjuk Pengaduan</h3>
+
+<p>
+Silakan mengisi formulir pengaduan dengan informasi
+yang benar dan jelas. Setiap pengaduan akan menjadi
+bahan evaluasi untuk meningkatkan kualitas pelayanan
+kepada masyarakat.
+</p>
+
+</div>
+
+
+<div class="form-box">
+
+<h3>Formulir Pengaduan</h3>
+
+
+<form>
+
+
+<div class="form-group">
+
+<label>
+Nama Lengkap <span class="required">*</span>
+</label>
+
+<input
+type="text"
+name="nama"
+placeholder="Masukkan nama lengkap"
+required>
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+Nomor WhatsApp
+</label>
+
+<input
+type="tel"
+name="whatsapp"
+placeholder="Contoh: 08xxxxxxxxxx">
+
+<div class="note">
+Nomor WhatsApp dapat digunakan untuk keperluan tindak lanjut.
+</div>
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+Jenis Layanan <span class="required">*</span>
+</label>
+
+<select name="layanan" required>
+
+<option value="">
+-- Pilih jenis layanan --
+</option>
+
+<option>
+Pelayanan Haji
+</option>
+
+<option>
+Pelayanan Umrah
+</option>
+
+<option>
+Informasi Publik
+</option>
+
+<option>
+Administrasi
+</option>
+
+<option>
+Pengaduan Pelayanan
+</option>
+
+<option>
+Lainnya
+</option>
+
+</select>
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+Tanggal Kejadian
+</label>
+
+<input
+type="date"
+name="tanggal">
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+Isi Pengaduan <span class="required">*</span>
+</label>
+
+<textarea
+name="pengaduan"
+placeholder="Tuliskan pengaduan atau keluhan Anda secara jelas..."
+required></textarea>
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+Saran dan Masukan
+</label>
+
+<textarea
+name="saran"
+placeholder="Tuliskan saran atau masukan Anda..."></textarea>
+
+</div>
+
+
+<button type="submit">
+Kirim Pengaduan
+</button>
+
+
+</form>
+
+</div>
+
+</main>
+
+
+<footer>
+
+<h3>Kementerian Haji dan Umrah</h3>
+
+<p>Kabupaten Aceh Barat</p>
+
+<p>Website Informasi dan Pelayanan Publik</p>
+
+</footer>
+
+</body>
+</html>
