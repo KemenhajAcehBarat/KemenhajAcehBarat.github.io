@@ -13,6 +13,10 @@
             padding: 0;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: Arial, Helvetica, sans-serif;
             background: #f5f7f6;
@@ -20,55 +24,67 @@
             line-height: 1.7;
         }
 
+        a {
+            text-decoration: none;
+        }
+
         .topbar {
             background: #0d4036;
             color: white;
             padding: 10px 5%;
-            font-size: 16px;
+            font-size: 14px;
         }
 
         header {
             background: white;
-            padding: 20px 5%;
+            padding: 18px 5%;
             display: flex;
             align-items: center;
             justify-content: space-between;
+            gap: 25px;
             border-bottom: 1px solid #e5e5e5;
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
         .brand {
             display: flex;
             align-items: center;
-            gap: 18px;
+            gap: 15px;
         }
 
         .brand img {
-            width: 82px;
-            height: 82px;
+            width: 72px;
+            height: 72px;
             object-fit: contain;
         }
 
         .brand h1 {
-            font-size: 25px;
+            font-size: 22px;
+            line-height: 1.25;
             color: #0b4439;
             margin-bottom: 3px;
         }
 
         .brand p {
             color: #55736c;
-            font-size: 17px;
+            font-size: 15px;
         }
 
         nav {
             display: flex;
-            gap: 32px;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 25px;
+            flex-wrap: wrap;
         }
 
         nav a {
             color: #0b1715;
-            text-decoration: none;
-            font-size: 17px;
+            font-size: 15px;
             font-weight: bold;
+            transition: color 0.2s ease;
         }
 
         nav a:hover {
@@ -86,19 +102,20 @@
             color: #f5c95c;
             font-weight: bold;
             letter-spacing: 2px;
-            font-size: 16px;
+            font-size: 14px;
             margin-bottom: 10px;
         }
 
         .hero h2 {
-            font-size: 46px;
+            font-size: 44px;
+            line-height: 1.2;
             margin-bottom: 15px;
         }
 
         .hero p {
             max-width: 850px;
             margin: auto;
-            font-size: 19px;
+            font-size: 18px;
             color: #edf7f3;
         }
 
@@ -121,33 +138,40 @@
 
         .intro p {
             color: #5a6d68;
-            font-size: 17px;
+            font-size: 16px;
             max-width: 800px;
             margin: auto;
         }
 
+        /* 7 KARTU LAYANAN */
         .services {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(3, minmax(0, 1fr));
             gap: 25px;
+            align-items: stretch;
         }
 
         .service-card {
             background: white;
-            padding: 30px;
+            padding: 28px;
             border-radius: 16px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
             border-top: 5px solid #dca82e;
-            transition: transform 0.2s ease;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
         }
 
         .service-card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.10);
         }
 
         .number {
             width: 45px;
             height: 45px;
+            flex: 0 0 45px;
             border-radius: 50%;
             background: #0d5143;
             color: white;
@@ -161,23 +185,46 @@
 
         .service-card h3 {
             color: #0d5143;
-            font-size: 22px;
+            font-size: 21px;
+            line-height: 1.3;
             margin-bottom: 12px;
         }
 
         .service-card p {
             color: #5a6d68;
-            font-size: 16px;
+            font-size: 15px;
+            margin-bottom: 5px;
         }
 
         .service-card ul {
             margin-top: 12px;
             padding-left: 20px;
             color: #5a6d68;
+            font-size: 14px;
         }
 
         .service-card li {
             margin-bottom: 6px;
+        }
+
+        /* Tombol */
+        .btn-layanan {
+            display: inline-block;
+            align-self: flex-start;
+            margin-top: auto;
+            padding: 10px 16px;
+            background: #006b3c;
+            color: white;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 14px;
+            transition: 0.3s ease;
+        }
+
+        .btn-layanan:hover {
+            background: #004d2b;
+            transform: translateY(-2px);
+            color: white;
         }
 
         footer {
@@ -195,24 +242,24 @@
 
         footer p {
             color: #dcebe6;
+            font-size: 14px;
+            margin: 3px 0;
         }
 
+        /* Tablet */
         @media (max-width: 900px) {
-
             header {
                 flex-direction: column;
                 align-items: flex-start;
-                gap: 20px;
             }
 
             nav {
                 width: 100%;
-                flex-wrap: wrap;
-                gap: 18px;
+                justify-content: flex-start;
             }
 
             .services {
-                grid-template-columns: 1fr 1fr;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
             }
 
             .hero h2 {
@@ -220,19 +267,35 @@
             }
         }
 
+        /* HP */
         @media (max-width: 600px) {
+            .topbar {
+                font-size: 12px;
+            }
+
+            header {
+                padding: 15px 5%;
+            }
 
             .brand img {
-                width: 68px;
-                height: 68px;
+                width: 62px;
+                height: 62px;
             }
 
             .brand h1 {
-                font-size: 21px;
+                font-size: 18px;
             }
 
-            .services {
-                grid-template-columns: 1fr;
+            .brand p {
+                font-size: 13px;
+            }
+
+            nav {
+                gap: 14px;
+            }
+
+            nav a {
+                font-size: 13px;
             }
 
             .hero {
@@ -240,7 +303,29 @@
             }
 
             .hero h2 {
-                font-size: 32px;
+                font-size: 30px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .container {
+                width: 92%;
+                margin: 40px auto;
+            }
+
+            .intro h3 {
+                font-size: 26px;
+            }
+
+            .services {
+                grid-template-columns: 1fr;
+                gap: 18px;
+            }
+
+            .service-card {
+                padding: 24px;
             }
         }
     </style>
@@ -276,7 +361,6 @@
 
     </header>
 
-
     <section class="hero">
 
         <div class="label">
@@ -294,7 +378,6 @@
 
     </section>
 
-
     <main class="container">
 
         <div class="intro">
@@ -309,168 +392,155 @@
 
         </div>
 
-
         <div class="services">
 
-    <div class="service-card">
+            <!-- 1. Standar Pelayanan -->
+            <div class="service-card">
 
-        <div class="number">1</div>
+                <div class="number">1</div>
 
-        <h3>Standar Pelayanan</h3>
+                <h3>Standar Pelayanan</h3>
 
-        <p>
-            Informasi mengenai standar pelayanan publik
-            Kantor Kementerian Haji dan Umrah Kabupaten Aceh Barat.
+                <p>
+                    Informasi mengenai standar pelayanan publik
+                    Kantor Kementerian Haji dan Umrah Kabupaten Aceh Barat.
+                </p>
 
-            
-        </p>
+                <ul>
+                    <li>Persyaratan pelayanan</li>
+                    <li>Prosedur pelayanan</li>
+                    <li>Waktu penyelesaian</li>
+                </ul>
 
-        <ul>
-            <li>Persyaratan pelayanan</li>
-            <li>Prosedur pelayanan</li>
-            <li>Waktu penyelesaian</li>
-        </ul>
-
-        <a href="standar-pelayanan.html" class="btn-layanan">
-            Lihat Standar Pelayanan
-        </a>
-
-    </div>
-
-        <p>
-            
-
-    </div>
-
-
-    <div class="service-card">
-
-        <div class="number">2</div>
-
-        <h3>Informasi Haji</h3>
-
-        <p>
-            Informasi mengenai penyelenggaraan ibadah Haji
-            dan pelayanan bagi masyarakat.
-        </p>
-
-        <ul>
-            <li>Informasi penyelenggaraan Haji</li>
-            <li>Persyaratan pelayanan</li>
-            <li>Informasi keberangkatan</li>
-        </ul>
-
-    </div>
-
-
-    <div class="service-card">
-
-        <div class="number">3</div>
-
-        <h3>Informasi Umrah</h3>
-
-        <p>
-            Informasi mengenai penyelenggaraan perjalanan
-            ibadah Umrah.
-        </p>
-
-        <ul>
-            <li>Informasi Umrah</li>
-            <li>Persyaratan</li>
-            <li>Informasi penyelenggara perjalanan Umrah</li>
-        </ul>
-
-    </div>
-
-
-    <div class="service-card">
-
-        <div class="number">4</div>
-
-        <h3>Informasi Publik</h3>
-
-        <p>
-            Layanan informasi publik untuk membantu masyarakat
-            memperoleh informasi yang dibutuhkan.
-        </p>
-
-        <ul>
-            <li>Permohonan informasi</li>
-            <li>Dokumen pelayanan</li>
-            <li>Pengumuman</li>
-        </ul>
-
-    </div>
-
-
-    <div class="service-card">
-
-        <div class="number">5</div>
-
-        <h3>Survei Kepuasan</h3>
-
-        <p>
-            Sarana bagi masyarakat untuk memberikan penilaian
-            terhadap kualitas pelayanan yang telah diterima.
-        </p>
-
-        <ul>
-            <li>Penilaian pelayanan</li>
-            <li>Saran dan masukan</li>
-            <li>Evaluasi kualitas pelayanan</li>
-        </ul>
-
-    </div>
-
-
-    <div class="service-card">
-
-        <div class="number">6</div>
-
-        <h3>Pendaftaran Layanan</h3>
-
-        <p>
-            Informasi mengenai tata cara dan persyaratan
-            pendaftaran layanan bagi masyarakat.
-        </p>
-
-        <ul>
-            <li>Persyaratan pendaftaran</li>
-            <li>Tata cara pendaftaran</li>
-            <li>Formulir layanan</li>
-        </ul>
-
-    </div>
-
-
-    <div class="service-card">
-
-        <div class="number">7</div>
-
-        <h3>Download Dokumen</h3>
-
-        <p>
-            Tempat untuk memperoleh dokumen dan formulir
-            yang berkaitan dengan pelayanan publik.
-        </p>
-
-        <ul>
-            <li>Formulir pelayanan</li>
-            <li>Dokumen standar pelayanan</li>
-            <li>Dokumen informasi publik</li>
-        </ul>
-
-    </div>
-```
+                <a href="standar-pelayanan.html" class="btn-layanan">
+                    Lihat Standar Pelayanan
+                </a>
 
             </div>
 
-
+            <!-- 2. Informasi Haji -->
             <div class="service-card">
 
-                
-    </main>
+                <div class="number">2</div>
 
+                <h3>Informasi Haji</h3>
+
+                <p>
+                    Informasi mengenai penyelenggaraan ibadah Haji
+                    dan pelayanan bagi masyarakat.
+                </p>
+
+                <ul>
+                    <li>Informasi penyelenggaraan Haji</li>
+                    <li>Persyaratan pelayanan</li>
+                    <li>Informasi keberangkatan</li>
+                </ul>
+
+            </div>
+
+            <!-- 3. Informasi Umrah -->
+            <div class="service-card">
+
+                <div class="number">3</div>
+
+                <h3>Informasi Umrah</h3>
+
+                <p>
+                    Informasi mengenai penyelenggaraan perjalanan
+                    ibadah Umrah.
+                </p>
+
+                <ul>
+                    <li>Informasi Umrah</li>
+                    <li>Persyaratan</li>
+                    <li>Informasi penyelenggara perjalanan Umrah</li>
+                </ul>
+
+            </div>
+
+            <!-- 4. Informasi Publik -->
+            <div class="service-card">
+
+                <div class="number">4</div>
+
+                <h3>Informasi Publik</h3>
+
+                <p>
+                    Layanan informasi publik untuk membantu masyarakat
+                    memperoleh informasi yang dibutuhkan.
+                </p>
+
+                <ul>
+                    <li>Permohonan informasi</li>
+                    <li>Dokumen pelayanan</li>
+                    <li>Pengumuman</li>
+                </ul>
+
+            </div>
+
+            <!-- 5. Survei Kepuasan -->
+            <div class="service-card">
+
+                <div class="number">5</div>
+
+                <h3>Survei Kepuasan</h3>
+
+                <p>
+                    Sarana bagi masyarakat untuk memberikan penilaian
+                    terhadap kualitas pelayanan yang telah diterima.
+                </p>
+
+                <ul>
+                    <li>Penilaian pelayanan</li>
+                    <li>Saran dan masukan</li>
+                    <li>Evaluasi kualitas pelayanan</li>
+                </ul>
+
+            </div>
+
+            <!-- 6. Pendaftaran Layanan -->
+            <div class="service-card">
+
+                <div class="number">6</div>
+
+                <h3>Pendaftaran Layanan</h3>
+
+                <p>
+                    Informasi mengenai tata cara dan persyaratan
+                    pendaftaran layanan bagi masyarakat.
+                </p>
+
+                <ul>
+                    <li>Persyaratan pendaftaran</li>
+                    <li>Tata cara pendaftaran</li>
+                    <li>Formulir layanan</li>
+                </ul>
+
+            </div>
+
+            <!-- 7. Download Dokumen -->
+            <div class="service-card">
+
+                <div class="number">7</div>
+
+                <h3>Download Dokumen</h3>
+
+                <p>
+                    Tempat untuk memperoleh dokumen dan formulir
+                    yang berkaitan dengan pelayanan publik.
+                </p>
+
+                <ul>
+                    <li>Formulir pelayanan</li>
+                    <li>Dokumen standar pelayanan</li>
+                    <li>Dokumen informasi publik</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </main>
 
     <footer>
 
