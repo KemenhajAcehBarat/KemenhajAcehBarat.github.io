@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Profil | Kementerian Haji dan Umrah Kabupaten Aceh Barat</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f7f6;
+            color: #173f36;
+            line-height: 1.7;
+        }
+
+        /* TOP BAR */
+        .topbar {
+            background: #0d4036;
+            color: white;
+            padding: 10px 5%;
+            font-size: 16px;
+        }
+
+        /* HEADER */
+        header {
+            background: white;
+            padding: 20px 5%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+
+        .brand img {
+            width: 82px;
+            height: 82px;
+            object-fit: contain;
+        }
+
+        .brand h1 {
+            font-size: 25px;
+            color: #0b4439;
+            margin-bottom: 3px;
+        }
+
+        .brand p {
+            color: #55736c;
+            font-size: 17px;
+        }
+
+        nav {
+            display: flex;
+            gap: 32px;
+        }
+
+        nav a {
+            color: #0b1715;
+            text-decoration: none;
+            font-size: 17px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #c99624;
+        }
+
+        /* HERO PROFIL */
+        .hero {
+            background: linear-gradient(135deg, #104c40, #237864);
+            color: white;
+            padding: 70px 5%;
+            text-align: center;
+        }
+
+        .hero .label {
+            color: #f5c95c;
+            font-weight: bold;
+            letter-spacing: 2px;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .hero h2 {
+            font-size: 46px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            max-width: 850px;
+            margin: auto;
+            font-size: 19px;
+            color: #edf7f3;
+        }
+
+        /* CONTENT */
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 55px auto;
+        }
+
+        .card {
+            background: white;
+            padding: 35px;
+            margin-bottom: 30px;
+            border-radius: 16px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+            border-left: 5px solid #dca82e;
+        }
+
+        .card h3 {
+            color: #0d5143;
+            font-size: 27px;
+            margin-bottom: 18px;
+        }
+
+        .card p {
+            color: #4b5f5a;
+            font-size: 17px;
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+
+        /* VISI MISI */
+        .visi-misi {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .visi,
+        .misi {
+            background: white;
+            padding: 32px;
+            border-radius: 16px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+        }
+
+        .visi {
+            border-top: 5px solid #dca82e;
+        }
+
+        .misi {
+            border-top: 5px solid #176653;
+        }
+
+        .visi h3,
+        .misi h3 {
+            color: #0d5143;
+            margin-bottom: 15px;
+            font-size: 26px;
+        }
+
+        .visi p {
+            color: #4b5f5a;
+            font-size: 17px;
+        }
+
+        .misi ol {
+            padding-left: 23px;
+            color: #4b5f5a;
+            font-size: 17px;
+        }
+
+        .misi li {
+            margin-bottom: 9px;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #0d4036;
+            color: white;
+            padding: 35px 5%;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        footer h3 {
+            color: #f5c95c;
+            margin-bottom: 8px;
+        }
+
+        footer p {
+            color: #dcebe6;
+        }
+
+        /* MOBILE */
+        @media (max-width: 800px) {
+
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
+            }
+
+            nav {
+                width: 100%;
+                flex-wrap: wrap;
+                gap: 18px;
+            }
+
+            .brand h1 {
+                font-size: 21px;
+            }
+
+            .brand img {
+                width: 68px;
+                height: 68px;
+            }
+
+            .hero {
+                padding: 50px 5%;
+            }
+
+            .hero h2 {
+                font-size: 34px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            .visi-misi {
+                grid-template-columns: 1fr;
+            }
+
+            .card,
+            .visi,
+            .misi {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- TOP BAR -->
+    <div class="topbar">
+        Website Informasi dan Pelayanan • Kabupaten Aceh Barat
+    </div>
+
+    <!-- HEADER -->
+    <header>
+
+        <div class="brand">
+            <img src="logo-kementerian-haji-umrah.png"
+                 alt="Logo Kementerian Haji dan Umrah">
+
+            <div>
+                <h1>Kementerian Haji dan Umrah</h1>
+                <p>Kabupaten Aceh Barat</p>
+            </div>
+        </div>
+
+        <nav>
+            <a href="index.html">Beranda</a>
+            <a href="profil.html">Profil</a>
+            <a href="index.html#layanan">Layanan</a>
+            <a href="index.html#informasi">Informasi</a>
+            <a href="index.html#kontak">Kontak</a>
+        </nav>
+
+    </header>
+
+
+    <!-- HERO -->
+    <section class="hero">
+
+        <div class="label">
+            PROFIL KANTOR
+        </div>
+
+        <h2>
+            Kementerian Haji dan Umrah
+        </h2>
+
+        <p>
+            Kabupaten Aceh Barat
+        </p>
+
+    </section>
+
+
+    <!-- CONTENT -->
+    <main class="container">
+
+        <!-- TENTANG KANTOR -->
+        <section class="card">
+
+            <h3>Tentang Kami</h3>
+
+            <p>
+                Kantor Kementerian Haji dan Umrah Kabupaten Aceh Barat
+                merupakan unit pelayanan yang memberikan informasi dan
+                pelayanan kepada masyarakat terkait penyelenggaraan
+                ibadah haji dan umrah di Kabupaten Aceh Barat.
+            </p>
+
+            <p>
+                Website ini disediakan sebagai media informasi dan
+                pelayanan publik untuk memudahkan masyarakat memperoleh
+                informasi secara cepat, transparan, dan akuntabel.
+            </p>
+
+            <p>
+                Melalui website ini, masyarakat dapat memperoleh informasi
+                mengenai layanan, pengumuman, persyaratan pelayanan,
+                dokumen, serta saluran komunikasi dan pengaduan.
+            </p>
+
+        </section>
+
+
+        <!-- VISI DAN MISI -->
+        <div class="visi-misi">
+
+            <section class="visi">
+
+                <h3>Visi</h3>
+
+                <p>
+                    Terwujudnya pelayanan Haji dan Umrah yang mudah,
+                    cepat, transparan, akuntabel, dan berorientasi
+                    pada kebutuhan masyarakat.
+                </p>
+
+            </section>
+
+
+            <section class="misi">
+
+                <h3>Misi</h3>
+
+                <ol>
+
+                    <li>
+                        Memberikan informasi pelayanan Haji dan Umrah
+                        yang jelas dan mudah diakses.
+                    </li>
+
+                    <li>
+                        Meningkatkan kualitas pelayanan kepada masyarakat.
+                    </li>
+
+                    <li>
+                        Mewujudkan pelayanan yang transparan dan akuntabel.
+                    </li>
+
+                    <li>
+                        Menyediakan sarana komunikasi dan pengaduan masyarakat.
+                    </li>
+
+                    <li>
+                        Memanfaatkan teknologi informasi untuk mendukung
+                        pelayanan publik.
+                    </li>
+
+                </ol>
+
+            </section>
+
+        </div>
+
+
+        <!-- KOMITMEN -->
+        <section class="card" style="margin-top:30px;">
+
+            <h3>Komitmen Pelayanan</h3>
+
+            <p>
+                Kami berkomitmen untuk memberikan pelayanan informasi
+                Haji dan Umrah yang mudah diakses, cepat, transparan,
+                akuntabel, serta berorientasi pada kebutuhan masyarakat.
+            </p>
+
+            <p>
+                Dengan memanfaatkan teknologi informasi, kami berupaya
+                menghadirkan pelayanan publik yang lebih efektif dan
+                memberikan kemudahan bagi masyarakat Kabupaten Aceh Barat.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <h3>Kementerian Haji dan Umrah</h3>
+
+        <p>
+            Kabupaten Aceh Barat
+        </p>
+
+        <p>
+            Website Informasi dan Pelayanan Publik
+        </p>
+
+    </footer>
+
+</body>
+</html>
