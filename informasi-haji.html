@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Informasi Haji | Kementerian Haji dan Umrah Kabupaten Aceh Barat</title>
 
     <style>
-
         * {
             box-sizing: border-box;
             margin: 0;
@@ -26,7 +23,9 @@
             line-height: 1.7;
         }
 
-        /* TOPBAR */
+        a {
+            text-decoration: none;
+        }
 
         .topbar {
             background: #0d4036;
@@ -35,15 +34,17 @@
             font-size: 15px;
         }
 
-        /* HEADER */
-
         header {
             background: white;
             padding: 18px 5%;
             display: flex;
             align-items: center;
             justify-content: space-between;
+            gap: 25px;
             border-bottom: 1px solid #e5e5e5;
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
         .brand {
@@ -70,13 +71,13 @@
 
         nav {
             display: flex;
+            align-items: center;
             gap: 25px;
             flex-wrap: wrap;
         }
 
         nav a {
             color: #17201d;
-            text-decoration: none;
             font-size: 15px;
             font-weight: bold;
         }
@@ -84,8 +85,6 @@
         nav a:hover {
             color: #c99624;
         }
-
-        /* HERO */
 
         .hero {
             background: linear-gradient(135deg, #104c40, #237864);
@@ -114,15 +113,11 @@
             color: #edf7f3;
         }
 
-        /* CONTAINER */
-
         .container {
             width: 90%;
             max-width: 1150px;
             margin: 50px auto;
         }
-
-        /* SECTION TITLE */
 
         .section-title {
             text-align: center;
@@ -138,8 +133,6 @@
             color: #60736d;
             margin-top: 5px;
         }
-
-        /* INFORMASI TERBARU */
 
         .latest {
             background: white;
@@ -203,8 +196,6 @@
             font-size: 15px;
         }
 
-        /* CARDS */
-
         .cards {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -212,39 +203,41 @@
             margin-bottom: 45px;
         }
 
-       .card {
-    background: white;
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 7px 22px rgba(0,0,0,0.06);
-    border-top: 4px solid #dca82e;
-}
+        .card-link {
+            display: block;
+            color: inherit;
+            text-decoration: none;
+            cursor: pointer;
+        }
 
-.card-link {
-    display: block;
-    color: inherit;
-    text-decoration: none;
-    cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 7px 22px rgba(0,0,0,0.06);
+            border-top: 4px solid #dca82e;
+            height: 100%;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
 
-.card-link:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.10);
-}
+        .card-link:hover .card {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.10);
+        }
 
-.card .number {
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    background: #0d5143;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    margin-bottom: 15px;
-}
+        .card .number {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: #0d5143;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
         .card h3 {
             color: #0d5143;
             font-size: 20px;
@@ -267,13 +260,57 @@
             margin-bottom: 5px;
         }
 
-        /* PENGUMUMAN */
+        .detail {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 25px;
+            border-left: 6px solid #0d5143;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+            scroll-margin-top: 120px;
+        }
+
+        .detail h2 {
+            color: #0d5143;
+            margin-bottom: 12px;
+            font-size: 25px;
+        }
+
+        .detail p {
+            color: #566b65;
+            margin-bottom: 10px;
+        }
+
+        .detail ul {
+            padding-left: 22px;
+            color: #566b65;
+        }
+
+        .detail li {
+            margin-bottom: 7px;
+        }
+
+        .back-top {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 9px 15px;
+            border-radius: 8px;
+            background: #0d5143;
+            color: white;
+            font-weight: bold;
+            font-size: 13px;
+        }
+
+        .back-top:hover {
+            opacity: 0.85;
+        }
 
         .announcement {
             background: #0d4036;
             color: white;
             padding: 30px;
             border-radius: 16px;
+            margin-top: 45px;
             margin-bottom: 45px;
         }
 
@@ -286,8 +323,6 @@
             color: #e3efeb;
             font-size: 15px;
         }
-
-        /* TOMBOL */
 
         .buttons {
             display: flex;
@@ -320,8 +355,6 @@
             opacity: 0.85;
         }
 
-        /* FOOTER */
-
         footer {
             background: #0d4036;
             color: white;
@@ -340,10 +373,7 @@
             font-size: 14px;
         }
 
-        /* RESPONSIVE */
-
         @media (max-width: 900px) {
-
             header {
                 flex-direction: column;
                 align-items: flex-start;
@@ -362,11 +392,9 @@
             .hero h2 {
                 font-size: 36px;
             }
-
         }
 
         @media (max-width: 600px) {
-
             .brand img {
                 width: 62px;
                 height: 62px;
@@ -400,27 +428,21 @@
                 padding: 22px;
             }
 
+            .detail {
+                padding: 22px;
+            }
         }
-
     </style>
-
 </head>
 
 <body>
-
-    <!-- TOPBAR -->
 
     <div class="topbar">
         Website Informasi dan Pelayanan • Kabupaten Aceh Barat
     </div>
 
-
-    <!-- HEADER -->
-
     <header>
-
         <div class="brand">
-
             <img src="logo-kementerian-haji-umrah.png"
                  alt="Logo Kementerian Haji dan Umrah">
 
@@ -428,72 +450,40 @@
                 <h1>Kementerian Haji dan Umrah</h1>
                 <p>Kabupaten Aceh Barat</p>
             </div>
-
         </div>
-
 
         <nav>
-
             <a href="index.html">Beranda</a>
-
             <a href="profil.html">Profil</a>
-
             <a href="layanan.html">Layanan</a>
-
             <a href="index.html#berita">Informasi</a>
-
             <a href="index.html#kontak">Kontak</a>
-
         </nav>
-
     </header>
 
-
-    <!-- HERO -->
-
     <section class="hero">
+        <div class="label">INFORMASI HAJI</div>
 
-        <div class="label">
-            INFORMASI HAJI
-        </div>
-
-        <h2>
-            Informasi Haji
-        </h2>
+        <h2>Informasi Haji</h2>
 
         <p>
             Informasi mengenai penyelenggaraan ibadah Haji
             bagi masyarakat Kabupaten Aceh Barat.
         </p>
-
     </section>
-
 
     <main class="container">
 
-
-        <!-- INFORMASI TERBARU -->
-
         <section class="latest">
-
             <div class="latest-title">
-
                 <div class="icon">📢</div>
-
                 <h2>Informasi Terbaru</h2>
-
             </div>
 
-
             <div class="latest-card">
+                <span class="date">Informasi Terbaru</span>
 
-                <span class="date">
-                    Informasi Terbaru
-                </span>
-
-                <h3>
-                    Informasi Penyelenggaraan Ibadah Haji
-                </h3>
+                <h3>Informasi Penyelenggaraan Ibadah Haji</h3>
 
                 <p>
                     Informasi terbaru mengenai penyelenggaraan
@@ -507,193 +497,218 @@
                     informasi resmi sebelum melakukan proses
                     pelayanan atau pendaftaran.
                 </p>
-
             </div>
-
         </section>
 
-
-        <!-- KETENTUAN -->
-
         <div class="section-title">
-
             <h2>Informasi Pelayanan Haji</h2>
 
             <p>
-                Informasi dasar yang dapat membantu masyarakat
-                memahami pelayanan Haji.
+                Klik salah satu menu di bawah untuk melihat
+                informasi pelayanan Haji.
             </p>
-
         </div>
-
 
         <section class="cards">
 
-
-            <!-- KARTU 1 -->
-
-            <article class="card">
-
-                <div class="number">1</div>
-
-                <h3>Persyaratan Haji</h3>
-
-                <p>
-                    Informasi mengenai persyaratan yang harus
-                    dipenuhi oleh masyarakat dalam memperoleh
-                    pelayanan Haji.
-                </p>
-
-                <ul>
-
-                    <li>Persyaratan administrasi</li>
-
-                    <li>Dokumen yang diperlukan</li>
-
-                    <li>Ketentuan lainnya</li>
-
-                </ul>
-
-            </article>
-
-
-            <!-- KARTU 2 -->
-
-            <article class="card">
-
-                <div class="number">2</div>
-
-                <h3>Pendaftaran Haji</h3>
-
-                <p>
-                    Informasi mengenai proses dan tata cara
-                    pendaftaran Haji bagi masyarakat.
-                </p>
-
-                <ul>
-
-                    <li>Tata cara pendaftaran</li>
-
-                    <li>Dokumen pendaftaran</li>
-
-                    <li>Proses pelayanan</li>
-
-                </ul>
-
-            </article>
-
-
-            <!-- KARTU 3 -->
-
-            <article class="card">
-
-                <div class="number">3</div>
-
-                <h3>Keberangkatan Haji</h3>
-
-                <p>
-                    Informasi mengenai tahapan dan persiapan
-                    keberangkatan jemaah Haji.
-                </p>
-
-                <ul>
-
-                    <li>Informasi keberangkatan</li>
-
-                    <li>Persiapan jemaah</li>
-
-                    <li>Informasi kelompok terbang</li>
-
-                </ul>
-
-            </article>
-
-
-            <!-- KARTU 4 -->
-
-            <article class="card">
-
-                <div class="number">4</div>
-
-                <h3>Pelayanan Jemaah</h3>
-
-                <p>
-                    Informasi mengenai pelayanan yang diberikan
-                    kepada jemaah Haji.
-                </p>
-
-                <ul>
-
-                    <li>Pelayanan administrasi</li>
-
-                    <li>Informasi jemaah</li>
-
-                    <li>Konsultasi pelayanan</li>
-
-                </ul>
-
-            </article>
-
-
-            <!-- KARTU 5 -->
-
-            <article class="card">
-
-                <div class="number">5</div>
-
-                <h3>Dokumen Haji</h3>
-
-                <p>
-                    Informasi mengenai dokumen yang berkaitan
-                    dengan pelayanan dan penyelenggaraan Haji.
-                </p>
-
-                <ul>
-
-                    <li>Formulir pelayanan</li>
-
-                    <li>Dokumen persyaratan</li>
-
-                    <li>Dokumen informasi</li>
-
-                </ul>
-
-            </article>
-
-
-            <!-- KARTU 6 -->
-
-            <article class="card">
-
-                <div class="number">6</div>
-
-                <h3>Konsultasi Haji</h3>
-
-                <p>
-                    Masyarakat dapat memperoleh informasi dan
-                    konsultasi mengenai pelayanan Haji.
-                </p>
-
-                <ul>
-
-                    <li>Informasi pelayanan</li>
-
-                    <li>Konsultasi persyaratan</li>
-
-                    <li>Konsultasi prosedur</li>
-
-                </ul>
-
-            </article>
-
+            <a href="#persyaratan-haji" class="card-link">
+                <article class="card">
+                    <div class="number">1</div>
+                    <h3>Persyaratan Haji</h3>
+
+                    <p>
+                        Informasi mengenai persyaratan yang harus
+                        dipenuhi oleh masyarakat dalam memperoleh
+                        pelayanan Haji.
+                    </p>
+
+                    <ul>
+                        <li>Persyaratan administrasi</li>
+                        <li>Dokumen yang diperlukan</li>
+                        <li>Ketentuan lainnya</li>
+                    </ul>
+                </article>
+            </a>
+
+            <a href="#pendaftaran-haji" class="card-link">
+                <article class="card">
+                    <div class="number">2</div>
+                    <h3>Pendaftaran Haji</h3>
+
+                    <p>
+                        Informasi mengenai proses dan tata cara
+                        pendaftaran Haji bagi masyarakat.
+                    </p>
+
+                    <ul>
+                        <li>Tata cara pendaftaran</li>
+                        <li>Dokumen pendaftaran</li>
+                        <li>Proses pelayanan</li>
+                    </ul>
+                </article>
+            </a>
+
+            <a href="#keberangkatan-haji" class="card-link">
+                <article class="card">
+                    <div class="number">3</div>
+                    <h3>Keberangkatan Haji</h3>
+
+                    <p>
+                        Informasi mengenai tahapan dan persiapan
+                        keberangkatan jemaah Haji.
+                    </p>
+
+                    <ul>
+                        <li>Informasi keberangkatan</li>
+                        <li>Persiapan jemaah</li>
+                        <li>Informasi kelompok terbang</li>
+                    </ul>
+                </article>
+            </a>
+
+            <a href="#pelayanan-jemaah" class="card-link">
+                <article class="card">
+                    <div class="number">4</div>
+                    <h3>Pelayanan Jemaah</h3>
+
+                    <p>
+                        Informasi mengenai pelayanan yang diberikan
+                        kepada jemaah Haji.
+                    </p>
+
+                    <ul>
+                        <li>Pelayanan administrasi</li>
+                        <li>Informasi jemaah</li>
+                        <li>Konsultasi pelayanan</li>
+                    </ul>
+                </article>
+            </a>
+
+            <a href="#dokumen-haji" class="card-link">
+                <article class="card">
+                    <div class="number">5</div>
+                    <h3>Dokumen Haji</h3>
+
+                    <p>
+                        Informasi mengenai dokumen yang berkaitan
+                        dengan pelayanan dan penyelenggaraan Haji.
+                    </p>
+
+                    <ul>
+                        <li>Formulir pelayanan</li>
+                        <li>Dokumen persyaratan</li>
+                        <li>Dokumen informasi</li>
+                    </ul>
+                </article>
+            </a>
+
+            <a href="#konsultasi-haji" class="card-link">
+                <article class="card">
+                    <div class="number">6</div>
+                    <h3>Konsultasi Haji</h3>
+
+                    <p>
+                        Masyarakat dapat memperoleh informasi dan
+                        konsultasi mengenai pelayanan Haji.
+                    </p>
+
+                    <ul>
+                        <li>Informasi pelayanan</li>
+                        <li>Konsultasi persyaratan</li>
+                        <li>Konsultasi prosedur</li>
+                    </ul>
+                </article>
+            </a>
 
         </section>
 
+        <section class="detail" id="persyaratan-haji">
+            <h2>1. Persyaratan Haji</h2>
+            <p>
+                Bagian ini digunakan untuk menyampaikan informasi
+                persyaratan pelayanan Haji kepada masyarakat
+                Kabupaten Aceh Barat.
+            </p>
+            <ul>
+                <li>Persyaratan administrasi.</li>
+                <li>Dokumen yang diperlukan.</li>
+                <li>Ketentuan lain sesuai informasi resmi yang berlaku.</li>
+            </ul>
+            <a href="#top" class="back-top">↑ Kembali ke Menu Haji</a>
+        </section>
 
-        <!-- PENGUMUMAN -->
+        <section class="detail" id="pendaftaran-haji">
+            <h2>2. Pendaftaran Haji</h2>
+            <p>
+                Bagian ini digunakan untuk memberikan informasi
+                mengenai proses dan tata cara pendaftaran Haji.
+            </p>
+            <ul>
+                <li>Tata cara pendaftaran.</li>
+                <li>Dokumen pendaftaran.</li>
+                <li>Proses pelayanan pendaftaran.</li>
+            </ul>
+            <a href="#top" class="back-top">↑ Kembali ke Menu Haji</a>
+        </section>
+
+        <section class="detail" id="keberangkatan-haji">
+            <h2>3. Keberangkatan Haji</h2>
+            <p>
+                Bagian ini digunakan untuk menyampaikan informasi
+                mengenai tahapan dan persiapan keberangkatan jemaah Haji.
+            </p>
+            <ul>
+                <li>Informasi keberangkatan.</li>
+                <li>Persiapan jemaah.</li>
+                <li>Informasi kelompok terbang.</li>
+            </ul>
+            <a href="#top" class="back-top">↑ Kembali ke Menu Haji</a>
+        </section>
+
+        <section class="detail" id="pelayanan-jemaah">
+            <h2>4. Pelayanan Jemaah</h2>
+            <p>
+                Bagian ini digunakan untuk memberikan informasi
+                mengenai pelayanan kepada jemaah Haji.
+            </p>
+            <ul>
+                <li>Pelayanan administrasi.</li>
+                <li>Informasi jemaah.</li>
+                <li>Konsultasi pelayanan.</li>
+            </ul>
+            <a href="#top" class="back-top">↑ Kembali ke Menu Haji</a>
+        </section>
+
+        <section class="detail" id="dokumen-haji">
+            <h2>5. Dokumen Haji</h2>
+            <p>
+                Bagian ini digunakan untuk menyampaikan informasi
+                mengenai dokumen yang berkaitan dengan pelayanan
+                dan penyelenggaraan Haji.
+            </p>
+            <ul>
+                <li>Formulir pelayanan.</li>
+                <li>Dokumen persyaratan.</li>
+                <li>Dokumen informasi.</li>
+            </ul>
+            <a href="#top" class="back-top">↑ Kembali ke Menu Haji</a>
+        </section>
+
+        <section class="detail" id="konsultasi-haji">
+            <h2>6. Konsultasi Haji</h2>
+            <p>
+                Masyarakat dapat memperoleh informasi dan konsultasi
+                mengenai pelayanan Haji melalui bagian layanan yang tersedia.
+            </p>
+            <ul>
+                <li>Informasi pelayanan.</li>
+                <li>Konsultasi persyaratan.</li>
+                <li>Konsultasi prosedur.</li>
+            </ul>
+            <a href="#top" class="back-top">↑ Kembali ke Menu Haji</a>
+        </section>
 
         <section class="announcement">
-
             <h2>📌 Pengumuman</h2>
 
             <p>
@@ -703,21 +718,14 @@
             </p>
 
             <p style="margin-top:10px;">
-
                 Informasi pada halaman ini dapat diperbarui
                 oleh pengelola website sesuai dengan adanya
                 perubahan kebijakan, ketentuan, jadwal,
                 atau informasi resmi lainnya.
-
             </p>
-
         </section>
 
-
-        <!-- TOMBOL -->
-
         <div class="buttons">
-
             <a href="layanan.html" class="btn btn-green">
                 ← Kembali ke Layanan
             </a>
@@ -725,31 +733,15 @@
             <a href="index.html" class="btn btn-gold">
                 🏠 Beranda
             </a>
-
         </div>
-
 
     </main>
 
-
-    <!-- FOOTER -->
-
     <footer>
-
-        <h3>
-            Kementerian Haji dan Umrah
-        </h3>
-
-        <p>
-            Kabupaten Aceh Barat
-        </p>
-
-        <p>
-            Website Informasi dan Pelayanan Publik
-        </p>
-
+        <h3>Kementerian Haji dan Umrah</h3>
+        <p>Kabupaten Aceh Barat</p>
+        <p>Website Informasi dan Pelayanan Publik</p>
     </footer>
-
 
 </body>
 </html>
