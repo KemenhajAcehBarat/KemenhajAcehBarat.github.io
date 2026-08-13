@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="id">
 <head>
   <meta charset="UTF-8">
@@ -167,7 +166,13 @@
     .service-box h3 {
       color: #123f35;
       font-size: 20px;
-      margin-bottom: 12px;
+      margin-bottom: 18px;
+    }
+
+    .service-box h4 {
+      color: #1c6252;
+      font-size: 17px;
+      margin: 22px 0 8px;
     }
 
     .service-box p {
@@ -198,15 +203,6 @@
       margin-right: 8px;
     }
 
-    .notice {
-      background: #edf5f1;
-      border-left: 5px solid #d6a63c;
-    }
-
-    .notice h3 {
-      color: #123f35;
-    }
-
     footer {
       background: #0d3028;
       color: #d9e7e2;
@@ -221,7 +217,6 @@
     }
 
     @media (max-width: 800px) {
-
       .nav {
         flex-direction: column;
         align-items: flex-start;
@@ -249,7 +244,6 @@
       }
     }
   </style>
-
 </head>
 
 <body>
@@ -261,237 +255,182 @@
   <header>
     <div class="nav">
 
-```
-  <div class="brand">
+      <div class="brand">
+        <img
+          src="logo-kementerian-haji-umrah.png"
+          alt="Logo Kementerian Haji dan Umrah"
+        >
 
-    <img
-      src="logo-kementerian-haji-umrah.png"
-      alt="Logo Kementerian Haji dan Umrah"
-    >
+        <div>
+          <h1>Kementerian Haji dan Umrah</h1>
+          <span>Kabupaten Aceh Barat</span>
+        </div>
+      </div>
 
-    <div>
-      <h1>Kementerian Haji dan Umrah</h1>
-      <span>Kabupaten Aceh Barat</span>
+      <nav class="menu">
+        <a href="index.html">Beranda</a>
+        <a href="profil.html">Profil</a>
+        <a href="layanan.html">Layanan</a>
+        <a href="index.html#berita">Informasi</a>
+        <a href="index.html#kontak">Kontak</a>
+        <a href="layanan.html" class="back-button">← Kembali</a>
+      </nav>
+
     </div>
-
-  </div>
-
-  <nav class="menu">
-    <a href="index.html">Beranda</a>
-    <a href="profil.html">Profil</a>
-    <a href="layanan.html">Layanan</a>
-    <a href="index.html#berita">Informasi</a>
-    <a href="index.html#kontak">Kontak</a>
-    <a href="layanan.html" class="back-button">← Kembali</a>
-  </nav>
-
-</div>
-```
-
   </header>
 
   <section class="hero">
+    <div class="label">STANDAR PELAYANAN PUBLIK</div>
 
-```
-<div class="label">
-  STANDAR PELAYANAN PUBLIK
-</div>
+    <h2>Standar Pelayanan</h2>
 
-<h2>
-  Standar Pelayanan
-</h2>
-
-<p>
-  Informasi mengenai standar pelayanan publik
-  Kantor Kementerian Haji dan Umrah Kabupaten Aceh Barat.
-</p>
-```
-
+    <p>
+      Informasi mengenai standar pelayanan publik
+      Kantor Kementerian Haji dan Umrah Kabupaten Aceh Barat.
+    </p>
   </section>
 
   <main class="container">
 
-```
-<div class="intro">
+    <div class="intro">
+      <h3>Standar Pelayanan Publik</h3>
 
-  <h3>Standar Pelayanan Publik</h3>
+      <p>
+        Informasi persyaratan, prosedur, dan waktu penyelesaian
+        layanan Haji pada Kantor Kementerian Haji dan Umrah
+        Kabupaten Aceh Barat.
+      </p>
+    </div>
 
-  <p>
-    Standar pelayanan merupakan pedoman dalam penyelenggaraan
-    pelayanan publik agar masyarakat memperoleh pelayanan yang
-    mudah, cepat, transparan, profesional, dan dapat dipertanggungjawabkan.
-  </p>
+    <section class="service-box">
 
-</div>
+      <h3>
+        <span class="number">1</span>
+        Persyaratan Pelayanan
+      </h3>
 
-<section class="service-box">
+      <h4>Persyaratan Pelayanan Pendaftaran Haji</h4>
+      <ul>
+        <li>Dokumen identitas diri sesuai ketentuan.</li>
+        <li>Dokumen persyaratan pendaftaran Haji yang diperlukan.</li>
+        <li>Bukti setoran awal Biaya Perjalanan Ibadah Haji (Bipih).</li>
+        <li>Dokumen pendukung lainnya sesuai ketentuan yang berlaku.</li>
+      </ul>
 
-  <h3>
-    <span class="number">1</span>
-    Persyaratan Pelayanan
-  </h3>
+      <h4>Persyaratan Pelayanan Pembatalan Haji</h4>
+      <ul>
+        <li>Surat permohonan pembatalan pendaftaran Haji.</li>
+        <li>Dokumen identitas jemaah Haji.</li>
+        <li>Bukti setoran awal dan/atau setoran Bipih.</li>
+        <li>Dokumen pendukung sesuai alasan pembatalan.</li>
+      </ul>
 
-  <p>
-    Persyaratan pelayanan disesuaikan dengan jenis layanan yang
-    diajukan oleh masyarakat.
-  </p>
+      <h4>Persyaratan Pelayanan Pelimpahan Porsi Haji</h4>
+      <ul>
+        <li>Surat permohonan pelimpahan nomor porsi.</li>
+        <li>Dokumen sesuai ketentuan pelimpahan porsi Haji.</li>
+        <li>Bukti setoran awal dan/atau setoran Bipih.</li>
+        <li>Dokumen hubungan keluarga antara jemaah dan penerima pelimpahan.</li>
+        <li>Dokumen identitas penerima pelimpahan.</li>
+        <li>Dokumen pendukung lainnya sesuai ketentuan yang berlaku.</li>
+      </ul>
 
-  <ul>
-    <li>Mengisi formulir permohonan pelayanan.</li>
-    <li>Melampirkan dokumen persyaratan yang diperlukan.</li>
-    <li>Menyerahkan dokumen kepada petugas pelayanan.</li>
-    <li>Memastikan data dan dokumen yang disampaikan benar.</li>
-  </ul>
+      <h4>Persyaratan Pelayanan Pelunasan Haji</h4>
+      <ul>
+        <li>Jemaah masuk dalam daftar yang berhak melakukan pelunasan.</li>
+        <li>Memenuhi persyaratan pelunasan sesuai ketentuan yang berlaku.</li>
+        <li>Membayar kekurangan Bipih melalui Bank Penerima Setoran Bipih.</li>
+        <li>Memiliki bukti pelunasan sesuai ketentuan.</li>
+      </ul>
 
-</section>
+    </section>
 
-<section class="service-box">
+    <section class="service-box">
 
-  <h3>
-    <span class="number">2</span>
-    Sistem, Mekanisme, dan Prosedur
-  </h3>
+      <h3>
+        <span class="number">2</span>
+        Prosedur Layanan
+      </h3>
 
-  <ol>
-    <li>Masyarakat mengajukan permohonan pelayanan.</li>
-    <li>Petugas menerima dan memeriksa permohonan.</li>
-    <li>Petugas melakukan verifikasi dokumen.</li>
-    <li>Permohonan diproses sesuai ketentuan.</li>
-    <li>Hasil pelayanan disampaikan kepada pemohon.</li>
-  </ol>
+      <h4>Prosedur Layanan Pendaftaran Haji</h4>
+      <ol>
+        <li>Pemohon menyiapkan dokumen persyaratan.</li>
+        <li>Pemohon melakukan setoran awal Bipih melalui Bank Penerima Setoran Bipih.</li>
+        <li>Pemohon mengajukan pendaftaran Haji sesuai prosedur.</li>
+        <li>Petugas menerima dan memeriksa dokumen.</li>
+        <li>Petugas melakukan verifikasi data dan dokumen.</li>
+        <li>Pendaftaran diproses sesuai ketentuan yang berlaku.</li>
+      </ol>
 
-</section>
+      <h4>Prosedur Layanan Pembatalan Haji</h4>
+      <ol>
+        <li>Pemohon mengajukan permohonan pembatalan.</li>
+        <li>Petugas menerima dan memeriksa kelengkapan dokumen.</li>
+        <li>Petugas melakukan verifikasi data dan dokumen.</li>
+        <li>Permohonan pembatalan diproses sesuai ketentuan.</li>
+        <li>Pemohon menerima informasi mengenai hasil proses pembatalan.</li>
+      </ol>
 
-<section class="service-box">
+      <h4>Prosedur Layanan Pelimpahan Porsi Haji</h4>
+      <ol>
+        <li>Pemohon mengajukan permohonan pelimpahan nomor porsi.</li>
+        <li>Petugas memeriksa kelengkapan dokumen persyaratan.</li>
+        <li>Petugas melakukan verifikasi dokumen dan hubungan keluarga.</li>
+        <li>Pemohon mengikuti proses verifikasi sesuai ketentuan.</li>
+        <li>Permohonan diproses sesuai ketentuan yang berlaku.</li>
+        <li>Hasil proses pelimpahan disampaikan kepada pemohon.</li>
+      </ol>
 
-  <h3>
-    <span class="number">3</span>
-    Jangka Waktu Pelayanan
-  </h3>
+      <h4>Prosedur Layanan Pelunasan Haji</h4>
+      <ol>
+        <li>Jemaah memastikan status berhak melakukan pelunasan.</li>
+        <li>Jemaah melakukan pembayaran pelunasan Bipih.</li>
+        <li>Jemaah menerima bukti setoran pelunasan.</li>
+        <li>Petugas melakukan verifikasi sesuai ketentuan.</li>
+        <li>Data pelunasan diproses sesuai prosedur yang berlaku.</li>
+      </ol>
 
-  <p>
-    Waktu penyelesaian pelayanan disesuaikan dengan jenis layanan,
-    kelengkapan persyaratan, serta ketentuan yang berlaku.
-  </p>
+    </section>
 
-</section>
+    <section class="service-box">
 
-<section class="service-box">
+      <h3>
+        <span class="number">3</span>
+        Waktu Penyelesaian Layanan
+      </h3>
 
-  <h3>
-    <span class="number">4</span>
-    Biaya atau Tarif
-  </h3>
+      <h4>Pendaftaran Haji</h4>
+      <p>
+        Waktu penyelesaian disesuaikan dengan kelengkapan persyaratan
+        dan proses verifikasi pendaftaran sesuai ketentuan yang berlaku.
+      </p>
 
-  <p>
-    Informasi mengenai biaya atau tarif pelayanan akan disesuaikan
-    dengan ketentuan resmi yang berlaku pada masing-masing jenis layanan.
-  </p>
+      <h4>Pembatalan Haji</h4>
+      <p>
+        Waktu penyelesaian mengikuti mekanisme pembatalan pendaftaran
+        Haji sesuai ketentuan yang berlaku.
+      </p>
 
-</section>
+      <h4>Pelimpahan Porsi Haji</h4>
+      <p>
+        Waktu penyelesaian disesuaikan dengan kelengkapan dokumen,
+        proses verifikasi, dan ketentuan yang berlaku.
+      </p>
 
-<section class="service-box">
+      <h4>Pelunasan Haji</h4>
+      <p>
+        Pelunasan dilakukan sesuai jadwal dan tahapan pelunasan
+        yang ditetapkan untuk musim Haji tahun berjalan.
+      </p>
 
-  <h3>
-    <span class="number">5</span>
-    Produk Pelayanan
-  </h3>
-
-  <p>
-    Produk pelayanan berupa informasi, dokumen, rekomendasi,
-    atau hasil layanan lainnya sesuai dengan jenis pelayanan
-    yang diberikan.
-  </p>
-
-</section>
-
-<section class="service-box">
-
-  <h3>
-    <span class="number">6</span>
-    Sarana dan Prasarana
-  </h3>
-
-  <ul>
-    <li>Ruang pelayanan.</li>
-    <li>Meja dan kursi pelayanan.</li>
-    <li>Media informasi pelayanan.</li>
-    <li>Fasilitas pendukung pelayanan.</li>
-    <li>Sarana pengaduan masyarakat.</li>
-  </ul>
-
-</section>
-
-<section class="service-box">
-
-  <h3>
-    <span class="number">7</span>
-    Kompetensi Petugas Pelayanan
-  </h3>
-
-  <p>
-    Petugas pelayanan melaksanakan tugas secara profesional,
-    ramah, transparan, responsif, dan sesuai dengan ketentuan
-    yang berlaku.
-  </p>
-
-</section>
-
-<section class="service-box">
-
-  <h3>
-    <span class="number">8</span>
-    Penanganan Pengaduan
-  </h3>
-
-  <p>
-    Masyarakat dapat menyampaikan kritik, saran, pertanyaan,
-    dan pengaduan melalui sarana pengaduan yang disediakan
-    oleh Kantor Kementerian Haji dan Umrah Kabupaten Aceh Barat.
-  </p>
-
-</section>
-
-<section class="service-box">
-
-  <h3>
-    <span class="number">9</span>
-    Evaluasi Kinerja Pelayanan
-  </h3>
-
-  <p>
-    Evaluasi pelayanan dilakukan secara berkala sebagai bagian
-    dari upaya peningkatan kualitas pelayanan publik kepada masyarakat.
-  </p>
-
-</section>
-
-<section class="service-box notice">
-
-  <h3>ℹ️ Catatan</h3>
-
-  <p>
-    Rincian persyaratan, waktu penyelesaian, biaya atau tarif,
-    serta produk pelayanan akan disesuaikan dengan Standar Pelayanan
-    resmi yang berlaku pada Kantor Kementerian Haji dan Umrah
-    Kabupaten Aceh Barat.
-  </p>
-
-</section>
-```
+    </section>
 
   </main>
 
   <footer>
-
-```
-<h3>Kementerian Haji dan Umrah</h3>
-
-<p>Kabupaten Aceh Barat</p>
-
-<p>Website Informasi dan Pelayanan Publik</p>
-```
-
+    <h3>Kementerian Haji dan Umrah</h3>
+    <p>Kabupaten Aceh Barat</p>
+    <p>Website Informasi dan Pelayanan Publik</p>
   </footer>
 
 </body>
