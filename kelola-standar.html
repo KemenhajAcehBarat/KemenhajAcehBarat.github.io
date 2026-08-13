@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Kelola Standar Pelayanan | Kementerian Haji dan Umrah Kabupaten Aceh Barat</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f7faf8;
+      color: #17352f;
+      line-height: 1.6;
+    }
+
+    .topbar {
+      background: #123f35;
+      color: white;
+      padding: 10px 5%;
+      font-size: 13px;
+    }
+
+    header {
+      background: white;
+      border-bottom: 1px solid #e5ece9;
+    }
+
+    .nav {
+      max-width: 1100px;
+      margin: auto;
+      padding: 15px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand img {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+    }
+
+    .brand h1 {
+      font-size: 17px;
+      color: #123f35;
+    }
+
+    .brand span {
+      font-size: 12px;
+      color: #687872;
+    }
+
+    .back {
+      background: #123f35;
+      color: white;
+      padding: 10px 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .hero {
+      background: linear-gradient(
+        120deg,
+        #123f35,
+        #1c6252,
+        #287866
+      );
+      color: white;
+      text-align: center;
+      padding: 55px 20px;
+    }
+
+    .hero h2 {
+      font-size: 34px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      color: #e9f3ef;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 45px 20px;
+    }
+
+    .info {
+      background: #edf5f1;
+      border-left: 5px solid #d6a63c;
+      padding: 18px;
+      margin-bottom: 30px;
+      border-radius: 8px;
+    }
+
+    .section {
+      background: white;
+      border: 1px solid #e1e9e5;
+      border-radius: 14px;
+      padding: 25px;
+      margin-bottom: 25px;
+      box-shadow: 0 5px 18px rgba(22,54,45,.05);
+    }
+
+    .section h3 {
+      color: #123f35;
+      margin-bottom: 20px;
+      font-size: 22px;
+    }
+
+    .field {
+      margin-bottom: 20px;
+    }
+
+    .field label {
+      display: block;
+      font-weight: bold;
+      color: #123f35;
+      margin-bottom: 8px;
+    }
+
+    .field textarea {
+      width: 100%;
+      min-height: 120px;
+      padding: 12px;
+      border: 1px solid #ccd9d4;
+      border-radius: 8px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 14px;
+      line-height: 1.6;
+      resize: vertical;
+    }
+
+    .field textarea:focus {
+      outline: none;
+      border-color: #1c6252;
+      box-shadow: 0 0 0 2px rgba(28,98,82,.1);
+    }
+
+    .save-area {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .save-button {
+      background: #123f35;
+      color: white;
+      border: none;
+      padding: 14px 30px;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .save-button:hover {
+      background: #1c6252;
+    }
+
+    .status {
+      margin-top: 15px;
+      color: #1c6252;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #0d3028;
+      color: #d9e7e2;
+      padding: 28px 5%;
+      text-align: center;
+      font-size: 13px;
+    }
+
+    footer h3 {
+      color: #f3d27f;
+      margin-bottom: 6px;
+    }
+
+    @media (max-width: 700px) {
+
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .hero h2 {
+        font-size: 28px;
+      }
+
+      .section {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="topbar">
+    Website Informasi dan Pelayanan Publik • Kabupaten Aceh Barat
+  </div>
+
+  <header>
+    <div class="nav">
+
+      <div class="brand">
+
+        <img
+          src="logo-kementerian-haji-umrah.png"
+          alt="Logo Kementerian Haji dan Umrah"
+        >
+
+        <div>
+          <h1>Kementerian Haji dan Umrah</h1>
+          <span>Kabupaten Aceh Barat</span>
+        </div>
+
+      </div>
+
+      <a href="layanan.html" class="back">
+        ← Kembali
+      </a>
+
+    </div>
+  </header>
+
+  <section class="hero">
+
+    <h2>Kelola Standar Pelayanan</h2>
+
+    <p>
+      Pengelolaan informasi persyaratan, prosedur,
+      dan waktu penyelesaian layanan.
+    </p>
+
+  </section>
+
+  <main class="container">
+
+    <div class="info">
+
+      <strong>Petunjuk:</strong>
+
+      <p>
+        Halaman ini nantinya digunakan untuk mengubah
+        informasi Standar Pelayanan tanpa perlu mengubah
+        kode halaman website.
+      </p>
+
+    </div>
+
+
+    <!-- PERSYARATAN PELAYANAN -->
+
+    <section class="section">
+
+      <h3>1. Persyaratan Pelayanan</h3>
+
+      <div class="field">
+
+        <label>
+          Persyaratan Pelayanan Pendaftaran Haji
+        </label>
+
+        <textarea
+          placeholder="Tuliskan persyaratan pelayanan Pendaftaran Haji di sini..."
+        ></textarea>
+
+      </div>
+
+
+      <div class="field">
+
+        <label>
+          Persyaratan Pelayanan Pembatalan Haji
+        </label>
+
+        <textarea
+          placeholder="Tuliskan persyaratan pelayanan Pembatalan Haji di sini..."
+        ></textarea>
+
+      </div>
+
+
+      <div class="field">
+
+        <label>
+          Persyaratan Pelayanan Pelimpahan Porsi Haji
+        </label>
+
+        <textarea
+          placeholder="Tuliskan persyaratan pelayanan Pelimpahan Porsi Haji di sini..."
+        ></textarea>
+
+      </div>
+
+
+      <div class="field">
+
+        <label>
+          Persyaratan Pelayanan Pelunasan Haji
+        </label>
+
+        <textarea
+          placeholder="Tuliskan persyaratan pelayanan Pelunasan Haji di sini..."
+        ></textarea>
+
+      </div>
+
+    </section>
+
+
+    <!-- PROSEDUR LAYANAN -->
+
+    <section class="section">
+
+      <h3>2. Prosedur Layanan</h3>
+
+      <div class="field">
+
+        <label>
+          Prosedur Layanan Pendaftaran Haji
+        </label>
+
+        <textarea
+          placeholder="Tuliskan prosedur layanan Pendaftaran Haji di sini..."
+        ></textarea>
+
+      </div>
+
+
+      <div class="field">
+
+        <label>
+          Prosedur Layanan Pembatalan Haji
+        </label>
+
+        <textarea
+          placeholder="Tuliskan prosedur layanan Pembatalan Haji di sini..."
+        ></textarea>
+
+      </div>
+
+
+      <div class="field">
+
+        <label>
+          Prosedur Layanan Pelimpahan Porsi Haji
+        </label>
+
+        <textarea
+          placeholder="Tuliskan prosedur layanan Pelimpahan Porsi Haji di sini..."
+        ></textarea>
+
+      </div>
+
+
+      <div class="field">
+
+        <label>
+          Prosedur Layanan Pelunasan Haji
+        </label>
+
+        <textarea
+          placeholder="Tuliskan prosedur layanan Pelunasan Haji di sini..."
+        ></textarea>
+
+      </div>
+
+    </section>
+
+
+    <!-- WAKTU PENYELESAIAN -->
+
+    <section class="section">
+
+      <h3>3. Waktu Penyelesaian Layanan</h3>
+
+      <div class="field">
+
+        <label>
+          Waktu Penyelesaian Pendaftaran Haji
+        </label>
+
+        <textarea
+          placeholder="Tuliskan waktu penyelesaian Pendaftaran Haji di sini..."
+        ></textarea>
+
+      </div>
+
+
+      <div class="field">
+
+        <label>
+          Waktu Penyelesaian Pembatalan Haji
+        </label>
+
+        <textarea
+          placeholder="Tuliskan waktu penyelesaian Pembatalan Haji di sini..."
+        ></textarea>
+
+      </div>
+
+
+      <div class="field">
+
+        <label>
+          Waktu Penyelesaian Pelimpahan Porsi Haji
+        </label>
+
+        <textarea
+          placeholder="Tuliskan waktu penyelesaian Pelimpahan Porsi Haji di sini..."
+        ></textarea>
+
+      </div>
+
+
+      <div class="field">
+
+        <label>
+          Waktu Penyelesaian Pelunasan Haji
+        </label>
+
+        <textarea
+          placeholder="Tuliskan waktu penyelesaian Pelunasan Haji di sini..."
+        ></textarea>
+
+      </div>
+
+    </section>
+
+
+    <div class="save-area">
+
+      <button class="save-button">
+        💾 Simpan Perubahan
+      </button>
+
+      <div class="status">
+        Data akan dapat disimpan setelah sistem penyimpanan
+        kita hubungkan.
+      </div>
+
+    </div>
+
+  </main>
+
+
+  <footer>
+
+    <h3>Kementerian Haji dan Umrah</h3>
+
+    <p>Kabupaten Aceh Barat</p>
+
+    <p>Website Informasi dan Pelayanan Publik</p>
+
+  </footer>
+
+</body>
+</html>
