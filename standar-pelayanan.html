@@ -13,10 +13,6 @@
       padding: 0;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
       font-family: Arial, Helvetica, sans-serif;
       background: #f7faf8;
@@ -24,30 +20,25 @@
       line-height: 1.7;
     }
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
     .topbar {
       background: #123f35;
-      color: #fff;
-      padding: 9px 5%;
+      color: white;
+      padding: 10px 5%;
       font-size: 13px;
     }
 
     header {
-      background: #fff;
+      background: white;
       border-bottom: 1px solid #e5ece9;
     }
 
     .nav {
-      max-width: 1180px;
+      max-width: 1100px;
       margin: auto;
       padding: 15px 24px;
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
       gap: 20px;
     }
 
@@ -58,149 +49,161 @@
     }
 
     .brand img {
-      width: 62px;
-      height: 62px;
+      width: 60px;
+      height: 60px;
       object-fit: contain;
     }
 
     .brand h1 {
       font-size: 17px;
-      line-height: 1.25;
       color: #123f35;
     }
 
     .brand span {
+      display: block;
       font-size: 12px;
-      color: #66756f;
+      color: #687872;
     }
 
-    .menu {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      font-size: 14px;
-      font-weight: 600;
-    }
-
-    .menu a:hover {
-      color: #b18020;
-    }
-
-    .back-button {
+    .back {
       background: #123f35;
-      color: #fff;
+      color: white;
       padding: 10px 16px;
       border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
     }
 
-    .back-button:hover {
+    .back:hover {
       background: #1c6252;
     }
 
     .hero {
       background: linear-gradient(
         120deg,
-        #123f35 0%,
-        #1c6252 55%,
-        #287866 100%
+        #123f35,
+        #1c6252,
+        #287866
       );
-      color: #fff;
+      color: white;
       text-align: center;
-      padding: 65px 24px;
-    }
-
-    .hero .label {
-      color: #f3d27f;
-      font-size: 13px;
-      font-weight: bold;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      margin-bottom: 10px;
+      padding: 55px 20px;
     }
 
     .hero h2 {
-      font-size: 38px;
-      line-height: 1.2;
-      margin-bottom: 14px;
+      font-size: 34px;
+      margin-bottom: 10px;
     }
 
     .hero p {
-      max-width: 780px;
-      margin: auto;
       color: #e9f3ef;
-      font-size: 16px;
-    }
-
-    .container {
-      max-width: 1050px;
-      margin: auto;
-      padding: 55px 24px;
-    }
-
-    .intro {
-      text-align: center;
-      margin-bottom: 35px;
-    }
-
-    .intro h3 {
-      color: #123f35;
-      font-size: 28px;
-      margin-bottom: 8px;
-    }
-
-    .intro p {
-      color: #687872;
       max-width: 800px;
       margin: auto;
     }
 
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 45px 20px;
+    }
+
+    .info-box {
+      background: #edf5f1;
+      border-left: 5px solid #d6a63c;
+      padding: 18px 20px;
+      margin-bottom: 30px;
+      border-radius: 8px;
+    }
+
+    .info-box strong {
+      color: #123f35;
+    }
+
     .service-box {
-      background: #fff;
+      background: white;
       border: 1px solid #e1e9e5;
       border-radius: 14px;
-      padding: 26px;
-      margin-bottom: 20px;
+      padding: 28px;
+      margin-bottom: 25px;
       box-shadow: 0 5px 18px rgba(22,54,45,.05);
     }
 
     .service-box h3 {
+      display: flex;
+      align-items: center;
+      gap: 12px;
       color: #123f35;
-      font-size: 20px;
-      margin-bottom: 18px;
+      margin-bottom: 25px;
+      font-size: 23px;
+      border-bottom: 2px solid #edf5f1;
+      padding-bottom: 15px;
+    }
+
+    .number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      background: #123f35;
+      color: white;
+      border-radius: 50%;
+      font-size: 17px;
+      flex-shrink: 0;
     }
 
     .service-box h4 {
       color: #1c6252;
       font-size: 17px;
-      margin: 22px 0 8px;
+      margin-top: 25px;
+      margin-bottom: 10px;
     }
 
-    .service-box p {
-      color: #687872;
-      margin-bottom: 10px;
+    .service-box h4:first-of-type {
+      margin-top: 0;
     }
 
     .service-box ul,
     .service-box ol {
-      padding-left: 23px;
-      color: #687872;
+      padding-left: 25px;
+      margin-bottom: 10px;
     }
 
     .service-box li {
-      margin-bottom: 7px;
+      margin-bottom: 6px;
     }
 
-    .number {
-      display: inline-flex;
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      background: #123f35;
-      color: #fff;
-      align-items: center;
-      justify-content: center;
+    .service-box p {
+      margin-bottom: 10px;
+    }
+
+    .empty-info {
+      color: #687872;
+      font-style: italic;
+      background: #f7faf8;
+      padding: 12px 15px;
+      border-radius: 7px;
+      list-style: none;
+      margin-left: -25px;
+    }
+
+    .manage-area {
+      text-align: center;
+      margin: 35px 0 10px;
+    }
+
+    .manage-button {
+      display: inline-block;
+      background: #d6a63c;
+      color: white;
+      padding: 13px 22px;
+      border-radius: 8px;
+      text-decoration: none;
       font-weight: bold;
-      margin-right: 8px;
+    }
+
+    .manage-button:hover {
+      background: #b88b2d;
     }
 
     footer {
@@ -216,31 +219,27 @@
       margin-bottom: 6px;
     }
 
-    @media (max-width: 800px) {
+    @media (max-width: 700px) {
+
       .nav {
         flex-direction: column;
         align-items: flex-start;
       }
 
-      .menu {
-        flex-wrap: wrap;
-        gap: 14px;
-      }
-
-      .hero {
-        padding: 50px 20px;
-      }
-
       .hero h2 {
-        font-size: 30px;
-      }
-
-      .container {
-        padding: 40px 18px;
+        font-size: 28px;
       }
 
       .service-box {
-        padding: 21px;
+        padding: 20px;
+      }
+
+      .service-box h3 {
+        font-size: 20px;
+      }
+
+      .manage-button {
+        width: 100%;
       }
     }
   </style>
@@ -253,9 +252,11 @@
   </div>
 
   <header>
+
     <div class="nav">
 
       <div class="brand">
+
         <img
           src="logo-kementerian-haji-umrah.png"
           alt="Logo Kementerian Haji dan Umrah"
@@ -265,42 +266,47 @@
           <h1>Kementerian Haji dan Umrah</h1>
           <span>Kabupaten Aceh Barat</span>
         </div>
+
       </div>
 
-      <nav class="menu">
-        <a href="index.html">Beranda</a>
-        <a href="profil.html">Profil</a>
-        <a href="layanan.html">Layanan</a>
-        <a href="index.html#berita">Informasi</a>
-        <a href="index.html#kontak">Kontak</a>
-        <a href="layanan.html" class="back-button">← Kembali</a>
-      </nav>
+      <a href="layanan.html" class="back">
+        ← Kembali
+      </a>
 
     </div>
+
   </header>
 
+
   <section class="hero">
-    <div class="label">STANDAR PELAYANAN PUBLIK</div>
 
     <h2>Standar Pelayanan</h2>
 
     <p>
-      Informasi mengenai standar pelayanan publik
+      Informasi Standar Pelayanan Publik
       Kantor Kementerian Haji dan Umrah Kabupaten Aceh Barat.
     </p>
+
   </section>
+
 
   <main class="container">
 
-    <div class="intro">
-      <h3>Standar Pelayanan Publik</h3>
+    <div class="info-box">
+
+      <strong>Informasi Standar Pelayanan</strong>
 
       <p>
-        Informasi persyaratan, prosedur, dan waktu penyelesaian
-        layanan Haji pada Kantor Kementerian Haji dan Umrah
-        Kabupaten Aceh Barat.
+        Halaman ini menampilkan informasi standar pelayanan
+        yang telah dikelola melalui halaman Kelola Standar Pelayanan.
       </p>
+
     </div>
+
+
+    <!-- ========================================= -->
+    <!-- 1. PERSYARATAN PELAYANAN -->
+    <!-- ========================================= -->
 
     <section class="service-box">
 
@@ -309,41 +315,40 @@
         Persyaratan Pelayanan
       </h3>
 
-      <h4>Persyaratan Pelayanan Pendaftaran Haji</h4>
-      <ul>
-        <li>Dokumen identitas diri sesuai ketentuan.</li>
-        <li>Dokumen persyaratan pendaftaran Haji yang diperlukan.</li>
-        <li>Bukti setoran awal Biaya Perjalanan Ibadah Haji (Bipih).</li>
-        <li>Dokumen pendukung lainnya sesuai ketentuan yang berlaku.</li>
-      </ul>
 
-      <h4>Persyaratan Pelayanan Pembatalan Haji</h4>
-      <ul>
-        <li>Surat permohonan pembatalan pendaftaran Haji.</li>
-        <li>Dokumen identitas jemaah Haji.</li>
-        <li>Bukti setoran awal dan/atau setoran Bipih.</li>
-        <li>Dokumen pendukung sesuai alasan pembatalan.</li>
-      </ul>
+      <h4>
+        Persyaratan Pelayanan Pendaftaran Haji
+      </h4>
 
-      <h4>Persyaratan Pelayanan Pelimpahan Porsi Haji</h4>
-      <ul>
-        <li>Surat permohonan pelimpahan nomor porsi.</li>
-        <li>Dokumen sesuai ketentuan pelimpahan porsi Haji.</li>
-        <li>Bukti setoran awal dan/atau setoran Bipih.</li>
-        <li>Dokumen hubungan keluarga antara jemaah dan penerima pelimpahan.</li>
-        <li>Dokumen identitas penerima pelimpahan.</li>
-        <li>Dokumen pendukung lainnya sesuai ketentuan yang berlaku.</li>
-      </ul>
+      <ul id="tampilPersyaratanPendaftaran"></ul>
 
-      <h4>Persyaratan Pelayanan Pelunasan Haji</h4>
-      <ul>
-        <li>Jemaah masuk dalam daftar yang berhak melakukan pelunasan.</li>
-        <li>Memenuhi persyaratan pelunasan sesuai ketentuan yang berlaku.</li>
-        <li>Membayar kekurangan Bipih melalui Bank Penerima Setoran Bipih.</li>
-        <li>Memiliki bukti pelunasan sesuai ketentuan.</li>
-      </ul>
+
+      <h4>
+        Persyaratan Pelayanan Pembatalan Haji
+      </h4>
+
+      <ul id="tampilPersyaratanPembatalan"></ul>
+
+
+      <h4>
+        Persyaratan Pelayanan Pelimpahan Porsi Haji
+      </h4>
+
+      <ul id="tampilPersyaratanPelimpahan"></ul>
+
+
+      <h4>
+        Persyaratan Pelayanan Pelunasan Haji
+      </h4>
+
+      <ul id="tampilPersyaratanPelunasan"></ul>
 
     </section>
+
+
+    <!-- ========================================= -->
+    <!-- 2. PROSEDUR LAYANAN -->
+    <!-- ========================================= -->
 
     <section class="service-box">
 
@@ -352,45 +357,40 @@
         Prosedur Layanan
       </h3>
 
-      <h4>Prosedur Layanan Pendaftaran Haji</h4>
-      <ol>
-        <li>Pemohon menyiapkan dokumen persyaratan.</li>
-        <li>Pemohon melakukan setoran awal Bipih melalui Bank Penerima Setoran Bipih.</li>
-        <li>Pemohon mengajukan pendaftaran Haji sesuai prosedur.</li>
-        <li>Petugas menerima dan memeriksa dokumen.</li>
-        <li>Petugas melakukan verifikasi data dan dokumen.</li>
-        <li>Pendaftaran diproses sesuai ketentuan yang berlaku.</li>
-      </ol>
 
-      <h4>Prosedur Layanan Pembatalan Haji</h4>
-      <ol>
-        <li>Pemohon mengajukan permohonan pembatalan.</li>
-        <li>Petugas menerima dan memeriksa kelengkapan dokumen.</li>
-        <li>Petugas melakukan verifikasi data dan dokumen.</li>
-        <li>Permohonan pembatalan diproses sesuai ketentuan.</li>
-        <li>Pemohon menerima informasi mengenai hasil proses pembatalan.</li>
-      </ol>
+      <h4>
+        Prosedur Layanan Pendaftaran Haji
+      </h4>
 
-      <h4>Prosedur Layanan Pelimpahan Porsi Haji</h4>
-      <ol>
-        <li>Pemohon mengajukan permohonan pelimpahan nomor porsi.</li>
-        <li>Petugas memeriksa kelengkapan dokumen persyaratan.</li>
-        <li>Petugas melakukan verifikasi dokumen dan hubungan keluarga.</li>
-        <li>Pemohon mengikuti proses verifikasi sesuai ketentuan.</li>
-        <li>Permohonan diproses sesuai ketentuan yang berlaku.</li>
-        <li>Hasil proses pelimpahan disampaikan kepada pemohon.</li>
-      </ol>
+      <ol id="tampilProsedurPendaftaran"></ol>
 
-      <h4>Prosedur Layanan Pelunasan Haji</h4>
-      <ol>
-        <li>Jemaah memastikan status berhak melakukan pelunasan.</li>
-        <li>Jemaah melakukan pembayaran pelunasan Bipih.</li>
-        <li>Jemaah menerima bukti setoran pelunasan.</li>
-        <li>Petugas melakukan verifikasi sesuai ketentuan.</li>
-        <li>Data pelunasan diproses sesuai prosedur yang berlaku.</li>
-      </ol>
+
+      <h4>
+        Prosedur Layanan Pembatalan Haji
+      </h4>
+
+      <ol id="tampilProsedurPembatalan"></ol>
+
+
+      <h4>
+        Prosedur Layanan Pelimpahan Porsi Haji
+      </h4>
+
+      <ol id="tampilProsedurPelimpahan"></ol>
+
+
+      <h4>
+        Prosedur Layanan Pelunasan Haji
+      </h4>
+
+      <ol id="tampilProsedurPelunasan"></ol>
 
     </section>
+
+
+    <!-- ========================================= -->
+    <!-- 3. WAKTU PENYELESAIAN -->
+    <!-- ========================================= -->
 
     <section class="service-box">
 
@@ -399,39 +399,455 @@
         Waktu Penyelesaian Layanan
       </h3>
 
-      <h4>Pendaftaran Haji</h4>
-      <p>
-        Waktu penyelesaian disesuaikan dengan kelengkapan persyaratan
-        dan proses verifikasi pendaftaran sesuai ketentuan yang berlaku.
-      </p>
 
-      <h4>Pembatalan Haji</h4>
-      <p>
-        Waktu penyelesaian mengikuti mekanisme pembatalan pendaftaran
-        Haji sesuai ketentuan yang berlaku.
-      </p>
+      <h4>
+        Pendaftaran Haji
+      </h4>
 
-      <h4>Pelimpahan Porsi Haji</h4>
-      <p>
-        Waktu penyelesaian disesuaikan dengan kelengkapan dokumen,
-        proses verifikasi, dan ketentuan yang berlaku.
-      </p>
+      <p id="tampilWaktuPendaftaran"></p>
 
-      <h4>Pelunasan Haji</h4>
-      <p>
-        Pelunasan dilakukan sesuai jadwal dan tahapan pelunasan
-        yang ditetapkan untuk musim Haji tahun berjalan.
-      </p>
+
+      <h4>
+        Pembatalan Haji
+      </h4>
+
+      <p id="tampilWaktuPembatalan"></p>
+
+
+      <h4>
+        Pelimpahan Porsi Haji
+      </h4>
+
+      <p id="tampilWaktuPelimpahan"></p>
+
+
+      <h4>
+        Pelunasan Haji
+      </h4>
+
+      <p id="tampilWaktuPelunasan"></p>
 
     </section>
 
+
+    <!-- ========================================= -->
+    <!-- KELOLA STANDAR -->
+    <!-- ========================================= -->
+
+    <div class="manage-area">
+
+      <a
+        href="kelola-standar.html"
+        class="manage-button"
+      >
+        ⚙️ Kelola Standar Pelayanan
+      </a>
+
+    </div>
+
   </main>
 
+
   <footer>
+
     <h3>Kementerian Haji dan Umrah</h3>
+
     <p>Kabupaten Aceh Barat</p>
+
     <p>Website Informasi dan Pelayanan Publik</p>
+
   </footer>
+
+
+  <!-- ========================================= -->
+  <!-- JAVASCRIPT -->
+  <!-- ========================================= -->
+
+  <script>
+
+    const namaPenyimpanan =
+      "standarPelayananAcehBarat";
+
+
+    /*
+      Menampilkan data berbentuk daftar.
+      Digunakan untuk bagian Persyaratan.
+    */
+
+    function tampilkanDaftar(id, teks) {
+
+      const elemen =
+        document.getElementById(id);
+
+      if (!elemen) {
+        return;
+      }
+
+
+      elemen.innerHTML = "";
+
+
+      if (!teks || teks.trim() === "") {
+
+        const kosong =
+          document.createElement("li");
+
+        kosong.className = "empty-info";
+
+        kosong.textContent =
+          "Informasi belum tersedia. Silakan kelola Standar Pelayanan.";
+
+        elemen.appendChild(kosong);
+
+        return;
+      }
+
+
+      const baris =
+        teks
+          .split("\n")
+          .map(function(baris) {
+            return baris.trim();
+          })
+          .filter(function(baris) {
+            return baris !== "";
+          });
+
+
+      baris.forEach(function(teksBaris) {
+
+        /*
+          Menghilangkan nomor yang ditulis pengguna,
+          misalnya:
+          1. KTP
+          2. KK
+
+          Agar nomor dari HTML tetap rapi.
+        */
+
+        teksBaris =
+          teksBaris.replace(
+            /^\d+[\.\)]\s*/,
+            ""
+          );
+
+
+        const li =
+          document.createElement("li");
+
+
+        li.textContent =
+          teksBaris;
+
+
+        elemen.appendChild(li);
+
+      });
+
+    }
+
+
+    /*
+      Menampilkan prosedur layanan.
+    */
+
+    function tampilkanProsedur(id, teks) {
+
+      const elemen =
+        document.getElementById(id);
+
+      if (!elemen) {
+        return;
+      }
+
+
+      elemen.innerHTML = "";
+
+
+      if (!teks || teks.trim() === "") {
+
+        const kosong =
+          document.createElement("li");
+
+        kosong.className = "empty-info";
+
+        kosong.textContent =
+          "Informasi belum tersedia. Silakan kelola Standar Pelayanan.";
+
+        elemen.appendChild(kosong);
+
+        return;
+      }
+
+
+      const baris =
+        teks
+          .split("\n")
+          .map(function(baris) {
+            return baris.trim();
+          })
+          .filter(function(baris) {
+            return baris !== "";
+          });
+
+
+      baris.forEach(function(teksBaris) {
+
+        teksBaris =
+          teksBaris.replace(
+            /^\d+[\.\)]\s*/,
+            ""
+          );
+
+
+        const li =
+          document.createElement("li");
+
+
+        li.textContent =
+          teksBaris;
+
+
+        elemen.appendChild(li);
+
+      });
+
+    }
+
+
+    /*
+      Menampilkan waktu penyelesaian.
+    */
+
+    function tampilkanWaktu(id, teks) {
+
+      const elemen =
+        document.getElementById(id);
+
+      if (!elemen) {
+        return;
+      }
+
+
+      if (!teks || teks.trim() === "") {
+
+        elemen.textContent =
+          "Informasi belum tersedia. Silakan kelola Standar Pelayanan.";
+
+        return;
+      }
+
+
+      elemen.textContent =
+        teks;
+
+    }
+
+
+    /*
+      Mengambil data dari localStorage.
+    */
+
+    function muatStandarPelayanan() {
+
+      const dataTersimpan =
+        localStorage.getItem(
+          namaPenyimpanan
+        );
+
+
+      /*
+        Jika belum ada data yang tersimpan,
+        halaman tidak lagi menampilkan data contoh.
+      */
+
+      if (!dataTersimpan) {
+
+        tampilkanDaftar(
+          "tampilPersyaratanPendaftaran",
+          ""
+        );
+
+        tampilkanDaftar(
+          "tampilPersyaratanPembatalan",
+          ""
+        );
+
+        tampilkanDaftar(
+          "tampilPersyaratanPelimpahan",
+          ""
+        );
+
+        tampilkanDaftar(
+          "tampilPersyaratanPelunasan",
+          ""
+        );
+
+
+        tampilkanProsedur(
+          "tampilProsedurPendaftaran",
+          ""
+        );
+
+        tampilkanProsedur(
+          "tampilProsedurPembatalan",
+          ""
+        );
+
+        tampilkanProsedur(
+          "tampilProsedurPelimpahan",
+          ""
+        );
+
+        tampilkanProsedur(
+          "tampilProsedurPelunasan",
+          ""
+        );
+
+
+        tampilkanWaktu(
+          "tampilWaktuPendaftaran",
+          ""
+        );
+
+        tampilkanWaktu(
+          "tampilWaktuPembatalan",
+          ""
+        );
+
+        tampilkanWaktu(
+          "tampilWaktuPelimpahan",
+          ""
+        );
+
+        tampilkanWaktu(
+          "tampilWaktuPelunasan",
+          ""
+        );
+
+        return;
+      }
+
+
+      let data;
+
+
+      try {
+
+        data =
+          JSON.parse(dataTersimpan);
+
+      } catch (error) {
+
+        console.error(
+          "Data Standar Pelayanan tidak dapat dibaca:",
+          error
+        );
+
+        return;
+      }
+
+
+      /* ================================= */
+      /* PERSYARATAN */
+      /* ================================= */
+
+      tampilkanDaftar(
+        "tampilPersyaratanPendaftaran",
+        data.persyaratanPendaftaran
+      );
+
+
+      tampilkanDaftar(
+        "tampilPersyaratanPembatalan",
+        data.persyaratanPembatalan
+      );
+
+
+      tampilkanDaftar(
+        "tampilPersyaratanPelimpahan",
+        data.persyaratanPelimpahan
+      );
+
+
+      tampilkanDaftar(
+        "tampilPersyaratanPelunasan",
+        data.persyaratanPelunasan
+      );
+
+
+      /* ================================= */
+      /* PROSEDUR */
+      /* ================================= */
+
+      tampilkanProsedur(
+        "tampilProsedurPendaftaran",
+        data.prosedurPendaftaran
+      );
+
+
+      tampilkanProsedur(
+        "tampilProsedurPembatalan",
+        data.prosedurPembatalan
+      );
+
+
+      tampilkanProsedur(
+        "tampilProsedurPelimpahan",
+        data.prosedurPelimpahan
+      );
+
+
+      tampilkanProsedur(
+        "tampilProsedurPelunasan",
+        data.prosedurPelunasan
+      );
+
+
+      /* ================================= */
+      /* WAKTU PENYELESAIAN */
+      /* ================================= */
+
+      tampilkanWaktu(
+        "tampilWaktuPendaftaran",
+        data.waktuPendaftaran
+      );
+
+
+      tampilkanWaktu(
+        "tampilWaktuPembatalan",
+        data.waktuPembatalan
+      );
+
+
+      tampilkanWaktu(
+        "tampilWaktuPelimpahan",
+        data.waktuPelimpahan
+      );
+
+
+      tampilkanWaktu(
+        "tampilWaktuPelunasan",
+        data.waktuPelunasan
+      );
+
+    }
+
+
+    /*
+      Jalankan ketika halaman selesai dibuka.
+    */
+
+    document.addEventListener(
+      "DOMContentLoaded",
+      function() {
+
+        muatStandarPelayanan();
+
+      }
+    );
+
+  </script>
 
 </body>
 </html>
