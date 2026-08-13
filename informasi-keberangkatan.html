@@ -149,50 +149,22 @@
 
 
         /* =========================
-           INFO UTAMA
+           KARTU UTAMA
         ========================= */
 
-        .intro-card {
+        .main-card {
             background: white;
-            border-radius: 18px;
-            padding: 35px;
+            border-radius: 20px;
+            padding: 45px 40px;
             box-shadow: 0 8px 28px rgba(0, 0, 0, 0.07);
             border-top: 5px solid #dca82e;
-            margin-bottom: 25px;
-        }
-
-        .intro-card h3 {
-            color: #0d5143;
-            font-size: 26px;
-            margin-bottom: 12px;
-        }
-
-        .intro-card p {
-            color: #5a6d68;
-            font-size: 16px;
-        }
-
-
-        /* =========================
-           KARTU CEK
-        ========================= */
-
-        .check-card {
-            background: white;
-            border-radius: 18px;
-            padding: 35px;
-            box-shadow: 0 8px 28px rgba(0, 0, 0, 0.07);
-        }
-
-        .check-title {
             text-align: center;
-            margin-bottom: 30px;
         }
 
-        .check-icon {
-            width: 65px;
-            height: 65px;
-            margin: 0 auto 15px;
+        .main-icon {
+            width: 75px;
+            height: 75px;
+            margin: 0 auto 20px;
 
             border-radius: 50%;
 
@@ -203,63 +175,20 @@
             align-items: center;
             justify-content: center;
 
-            font-size: 30px;
+            font-size: 36px;
         }
 
-        .check-title h3 {
+        .main-card h3 {
             color: #0d5143;
-            font-size: 27px;
-            margin-bottom: 8px;
+            font-size: 28px;
+            margin-bottom: 15px;
         }
 
-        .check-title p {
+        .main-card p {
             color: #5a6d68;
-            font-size: 15px;
-        }
-
-
-        /* =========================
-           FORM
-        ========================= */
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            font-weight: bold;
-            color: #0d5143;
-            margin-bottom: 8px;
-        }
-
-        .form-group small {
-            display: block;
-            color: #687872;
-            font-size: 13px;
-            margin-bottom: 8px;
-        }
-
-        .form-group input {
-            width: 100%;
-            padding: 15px;
-
-            border: 1px solid #ccd9d4;
-            border-radius: 9px;
-
             font-size: 16px;
-            font-family: Arial, Helvetica, sans-serif;
-
-            outline: none;
-
-            transition: 0.2s ease;
-        }
-
-        .form-group input:focus {
-            border-color: #1c6252;
-
-            box-shadow:
-                0 0 0 3px rgba(28, 98, 82, 0.10);
+            max-width: 720px;
+            margin: 0 auto 25px;
         }
 
 
@@ -268,37 +197,32 @@
         ========================= */
 
         .official-button {
-            width: 100%;
-
-            display: block;
-
-            border: none;
+            display: inline-block;
 
             background: #0d5143;
             color: white;
 
-            padding: 15px 20px;
+            padding: 16px 28px;
 
-            border-radius: 9px;
+            border-radius: 10px;
 
             font-size: 16px;
             font-weight: bold;
 
-            text-align: center;
-
-            cursor: pointer;
-
             transition: 0.3s ease;
+
+            box-shadow: 0 5px 15px rgba(13, 81, 67, 0.20);
         }
 
         .official-button:hover {
             background: #006b3c;
-            transform: translateY(-2px);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(13, 81, 67, 0.25);
         }
 
 
         /* =========================
-           INFORMASI 3 KARTU
+           INFORMASI
         ========================= */
 
         .information-grid {
@@ -361,6 +285,8 @@
             color: #6f5a24;
 
             font-size: 13px;
+
+            text-align: left;
         }
 
         .note strong {
@@ -477,13 +403,17 @@
                 margin: 40px auto;
             }
 
-            .intro-card,
-            .check-card {
-                padding: 25px 20px;
+            .main-card {
+                padding: 30px 20px;
             }
 
-            .check-title h3 {
+            .main-card h3 {
                 font-size: 23px;
+            }
+
+            .official-button {
+                width: 100%;
+                padding: 15px 18px;
             }
 
         }
@@ -557,9 +487,9 @@
         </h2>
 
         <p>
-            Dapatkan informasi estimasi keberangkatan
-            berdasarkan nomor porsi Haji melalui layanan
-            resmi Kementerian Haji dan Umrah.
+            Akses layanan resmi untuk mengetahui
+            perkiraan tahun keberangkatan Haji
+            berdasarkan nomor porsi.
         </p>
 
     </section>
@@ -572,96 +502,50 @@
     <main class="container">
 
 
-        <!-- INFORMASI -->
+        <!-- KARTU UTAMA -->
 
-        <section class="intro-card">
+        <section class="main-card">
+
+            <div class="main-icon">
+                🕋
+            </div>
 
             <h3>
-                🕋 Cek Estimasi Keberangkatan Haji
+                Cek Perkiraan Keberangkatan Haji
             </h3>
 
             <p>
-                Jamaah dapat melakukan pengecekan estimasi
-                keberangkatan menggunakan nomor porsi Haji.
-                Pengecekan dilakukan melalui layanan resmi
-                Kementerian Haji dan Umrah.
+                Untuk mengetahui perkiraan tahun keberangkatan
+                berdasarkan nomor porsi Haji, silakan menggunakan
+                layanan resmi Kementerian Haji dan Umrah Provinsi Aceh.
             </p>
 
-        </section>
-
-
-        <!-- KARTU PENGECEKAN -->
-
-        <section class="check-card">
-
-
-            <div class="check-title">
-
-                <div class="check-icon">
-                    🔎
-                </div>
-
-                <h3>
-                    Cek Perkiraan Keberangkatan
-                </h3>
-
-                <p>
-                    Masukkan nomor porsi Haji Anda
-                    pada layanan resmi.
-                </p>
-
-            </div>
-
-
-            <div class="form-group">
-
-                <label for="nomorPorsi">
-                    Nomor Porsi Haji
-                </label>
-
-                <small>
-                    Nomor porsi Haji terdiri dari 10 digit.
-                </small>
-
-                <input
-                    type="text"
-                    id="nomorPorsi"
-                    inputmode="numeric"
-                    maxlength="10"
-                    placeholder="Masukkan 10 digit nomor porsi"
-                >
-
-            </div>
-
-
-            <button
-                type="button"
+            <a
+                href="https://aceh.haji.go.id/estimasi-keberangkatan"
+                target="_blank"
+                rel="noopener noreferrer"
                 class="official-button"
-                onclick="bukaLayananResmi()"
             >
-                🔎 Cek Estimasi di Layanan Resmi
-            </button>
-
+                🔎 Cek Estimasi Keberangkatan
+            </a>
 
             <div class="note">
 
                 <strong>Informasi penting:</strong>
 
-                Pengecekan estimasi keberangkatan dilakukan
-                melalui layanan resmi Kementerian Haji dan Umrah.
-                Hasil estimasi dapat berubah sesuai dengan
-                ketentuan, kuota, dan kebijakan penyelenggaraan
-                ibadah Haji.
+                Setelah tombol ditekan, Bapak/Ibu akan diarahkan
+                ke halaman resmi Kementerian Haji dan Umrah Provinsi
+                Aceh. Nomor porsi dan proses pengecekan dilakukan
+                langsung pada sistem resmi tersebut.
 
             </div>
-
 
         </section>
 
 
         <!-- =========================
-             3 INFORMASI
-        ========================== -->
+             INFORMASI 3 KARTU
+        ========================= -->
 
         <section class="information-grid">
 
@@ -677,7 +561,7 @@
                 </h4>
 
                 <p>
-                    Gunakan nomor porsi yang tercantum
+                    Siapkan nomor porsi Haji yang tercantum
                     pada dokumen pendaftaran Haji.
                 </p>
 
@@ -695,9 +579,8 @@
                 </h4>
 
                 <p>
-                    Informasi keberangkatan diperoleh
-                    melalui sistem resmi Kementerian
-                    Haji dan Umrah.
+                    Informasi perkiraan keberangkatan dapat
+                    diperiksa melalui sistem resmi.
                 </p>
 
             </div>
@@ -715,8 +598,7 @@
 
                 <p>
                     Pengecekan dilakukan melalui
-                    layanan resmi Kementerian Haji
-                    dan Umrah.
+                    Kementerian Haji dan Umrah Provinsi Aceh.
                 </p>
 
             </div>
@@ -727,7 +609,7 @@
 
         <!-- =========================
              KEMBALI
-        ========================== -->
+        ========================= -->
 
         <div class="back-area">
 
@@ -746,7 +628,7 @@
 
     <!-- =========================
          FOOTER
-    ========================== -->
+    ========================= -->
 
     <footer>
 
@@ -763,66 +645,6 @@
         </p>
 
     </footer>
-
-
-    <!-- =========================
-         JAVASCRIPT
-    ========================== -->
-
-    <script>
-
-        function bukaLayananResmi() {
-
-            const nomorPorsi =
-                document.getElementById("nomorPorsi").value.trim();
-
-
-            if (nomorPorsi === "") {
-
-                alert(
-                    "Silakan masukkan nomor porsi Haji terlebih dahulu."
-                );
-
-                document
-                    .getElementById("nomorPorsi")
-                    .focus();
-
-                return;
-            }
-
-
-            if (!/^\d{10}$/.test(nomorPorsi)) {
-
-                alert(
-                    "Nomor porsi harus terdiri dari 10 digit angka."
-                );
-
-                document
-                    .getElementById("nomorPorsi")
-                    .focus();
-
-                return;
-            }
-
-
-            /*
-             * Nomor porsi tidak dikirim atau disimpan
-             * oleh website Aceh Barat.
-             *
-             * Untuk menjaga keamanan dan keakuratan data,
-             * pengecekan dilakukan pada layanan resmi
-             * Kementerian Haji dan Umrah.
-             */
-
-
-            window.open(
-                "https://sumut.haji.go.id/estimasi-keberangkatan",
-                "_blank"
-            );
-
-        }
-
-    </script>
 
 
 </body>
