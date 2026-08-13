@@ -73,6 +73,10 @@
       font-weight: bold;
     }
 
+    .back:hover {
+      background: #1c6252;
+    }
+
     .hero {
       background: linear-gradient(
         120deg,
@@ -108,6 +112,10 @@
       border-radius: 8px;
     }
 
+    .info strong {
+      color: #123f35;
+    }
+
     .section {
       background: white;
       border: 1px solid #e1e9e5;
@@ -124,7 +132,11 @@
     }
 
     .field {
-      margin-bottom: 20px;
+      margin-bottom: 22px;
+    }
+
+    .field:last-child {
+      margin-bottom: 0;
     }
 
     .field label {
@@ -134,9 +146,16 @@
       margin-bottom: 8px;
     }
 
+    .field small {
+      display: block;
+      color: #687872;
+      margin-bottom: 7px;
+      font-size: 12px;
+    }
+
     .field textarea {
       width: 100%;
-      min-height: 120px;
+      min-height: 130px;
       padding: 12px;
       border: 1px solid #ccd9d4;
       border-radius: 8px;
@@ -155,27 +174,63 @@
     .save-area {
       text-align: center;
       margin-top: 30px;
+      margin-bottom: 20px;
+    }
+
+    .button-group {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .save-button,
+    .load-button,
+    .clear-button {
+      border: none;
+      padding: 14px 25px;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: bold;
+      cursor: pointer;
     }
 
     .save-button {
       background: #123f35;
       color: white;
-      border: none;
-      padding: 14px 30px;
-      border-radius: 8px;
-      font-size: 16px;
-      font-weight: bold;
-      cursor: pointer;
     }
 
     .save-button:hover {
       background: #1c6252;
     }
 
+    .load-button {
+      background: #d6a63c;
+      color: white;
+    }
+
+    .load-button:hover {
+      background: #b88b2d;
+    }
+
+    .clear-button {
+      background: #e5ece9;
+      color: #17352f;
+    }
+
+    .clear-button:hover {
+      background: #d5e0db;
+    }
+
     .status {
-      margin-top: 15px;
-      color: #1c6252;
+      margin-top: 18px;
+      min-height: 25px;
       font-weight: bold;
+      color: #1c6252;
+    }
+
+    .warning {
+      color: #9a6c00;
     }
 
     footer {
@@ -205,6 +260,16 @@
       .section {
         padding: 20px;
       }
+
+      .button-group {
+        flex-direction: column;
+      }
+
+      .save-button,
+      .load-button,
+      .clear-button {
+        width: 100%;
+      }
     }
   </style>
 </head>
@@ -216,6 +281,7 @@
   </div>
 
   <header>
+
     <div class="nav">
 
       <div class="brand">
@@ -237,39 +303,50 @@
       </a>
 
     </div>
+
   </header>
+
 
   <section class="hero">
 
     <h2>Kelola Standar Pelayanan</h2>
 
     <p>
-      Pengelolaan informasi persyaratan, prosedur,
-      dan waktu penyelesaian layanan.
+      Kelola dan perbarui informasi standar pelayanan
+      Kantor Kementerian Haji dan Umrah Kabupaten Aceh Barat.
     </p>
 
   </section>
 
+
   <main class="container">
+
 
     <div class="info">
 
-      <strong>Petunjuk:</strong>
+      <strong>Petunjuk Penggunaan</strong>
 
       <p>
-        Halaman ini nantinya digunakan untuk mengubah
-        informasi Standar Pelayanan tanpa perlu mengubah
-        kode halaman website.
+        Silakan isi atau ubah informasi pada setiap kolom di bawah.
+        Setelah selesai, klik tombol <strong>💾 Simpan Perubahan</strong>.
+      </p>
+
+      <p style="margin-top:8px;">
+        Data akan tersimpan pada browser yang digunakan dan akan
+        muncul kembali ketika halaman ini dibuka.
       </p>
 
     </div>
 
 
-    <!-- PERSYARATAN PELAYANAN -->
+    <!-- ========================================= -->
+    <!-- 1. PERSYARATAN PELAYANAN -->
+    <!-- ========================================= -->
 
     <section class="section">
 
       <h3>1. Persyaratan Pelayanan</h3>
+
 
       <div class="field">
 
@@ -277,8 +354,16 @@
           Persyaratan Pelayanan Pendaftaran Haji
         </label>
 
+        <small>
+          Masukkan setiap persyaratan pada baris terpisah.
+        </small>
+
         <textarea
-          placeholder="Tuliskan persyaratan pelayanan Pendaftaran Haji di sini..."
+          id="persyaratanPendaftaran"
+          placeholder="Contoh:
+1. Kartu Tanda Penduduk (KTP).
+2. Kartu Keluarga (KK).
+3. Dokumen persyaratan lainnya sesuai ketentuan."
         ></textarea>
 
       </div>
@@ -290,7 +375,12 @@
           Persyaratan Pelayanan Pembatalan Haji
         </label>
 
+        <small>
+          Masukkan persyaratan pembatalan sesuai ketentuan terbaru.
+        </small>
+
         <textarea
+          id="persyaratanPembatalan"
           placeholder="Tuliskan persyaratan pelayanan Pembatalan Haji di sini..."
         ></textarea>
 
@@ -303,7 +393,12 @@
           Persyaratan Pelayanan Pelimpahan Porsi Haji
         </label>
 
+        <small>
+          Masukkan persyaratan pelimpahan porsi sesuai ketentuan terbaru.
+        </small>
+
         <textarea
+          id="persyaratanPelimpahan"
           placeholder="Tuliskan persyaratan pelayanan Pelimpahan Porsi Haji di sini..."
         ></textarea>
 
@@ -316,7 +411,12 @@
           Persyaratan Pelayanan Pelunasan Haji
         </label>
 
+        <small>
+          Masukkan persyaratan pelunasan sesuai ketentuan terbaru.
+        </small>
+
         <textarea
+          id="persyaratanPelunasan"
           placeholder="Tuliskan persyaratan pelayanan Pelunasan Haji di sini..."
         ></textarea>
 
@@ -325,11 +425,14 @@
     </section>
 
 
-    <!-- PROSEDUR LAYANAN -->
+    <!-- ========================================= -->
+    <!-- 2. PROSEDUR LAYANAN -->
+    <!-- ========================================= -->
 
     <section class="section">
 
       <h3>2. Prosedur Layanan</h3>
+
 
       <div class="field">
 
@@ -337,8 +440,17 @@
           Prosedur Layanan Pendaftaran Haji
         </label>
 
+        <small>
+          Tuliskan langkah-langkah pelayanan secara berurutan.
+        </small>
+
         <textarea
-          placeholder="Tuliskan prosedur layanan Pendaftaran Haji di sini..."
+          id="prosedurPendaftaran"
+          placeholder="Contoh:
+1. Pemohon menyiapkan dokumen.
+2. Pemohon mengajukan permohonan.
+3. Petugas memeriksa dokumen.
+4. Petugas melakukan verifikasi."
         ></textarea>
 
       </div>
@@ -350,7 +462,12 @@
           Prosedur Layanan Pembatalan Haji
         </label>
 
+        <small>
+          Tuliskan prosedur pembatalan sesuai ketentuan terbaru.
+        </small>
+
         <textarea
+          id="prosedurPembatalan"
           placeholder="Tuliskan prosedur layanan Pembatalan Haji di sini..."
         ></textarea>
 
@@ -363,7 +480,12 @@
           Prosedur Layanan Pelimpahan Porsi Haji
         </label>
 
+        <small>
+          Tuliskan prosedur pelimpahan porsi sesuai ketentuan terbaru.
+        </small>
+
         <textarea
+          id="prosedurPelimpahan"
           placeholder="Tuliskan prosedur layanan Pelimpahan Porsi Haji di sini..."
         ></textarea>
 
@@ -376,7 +498,12 @@
           Prosedur Layanan Pelunasan Haji
         </label>
 
+        <small>
+          Tuliskan prosedur pelunasan sesuai ketentuan terbaru.
+        </small>
+
         <textarea
+          id="prosedurPelunasan"
           placeholder="Tuliskan prosedur layanan Pelunasan Haji di sini..."
         ></textarea>
 
@@ -385,11 +512,14 @@
     </section>
 
 
-    <!-- WAKTU PENYELESAIAN -->
+    <!-- ========================================= -->
+    <!-- 3. WAKTU PENYELESAIAN -->
+    <!-- ========================================= -->
 
     <section class="section">
 
       <h3>3. Waktu Penyelesaian Layanan</h3>
+
 
       <div class="field">
 
@@ -398,7 +528,8 @@
         </label>
 
         <textarea
-          placeholder="Tuliskan waktu penyelesaian Pendaftaran Haji di sini..."
+          id="waktuPendaftaran"
+          placeholder="Contoh: 1 hari kerja setelah persyaratan dinyatakan lengkap."
         ></textarea>
 
       </div>
@@ -411,6 +542,7 @@
         </label>
 
         <textarea
+          id="waktuPembatalan"
           placeholder="Tuliskan waktu penyelesaian Pembatalan Haji di sini..."
         ></textarea>
 
@@ -424,6 +556,7 @@
         </label>
 
         <textarea
+          id="waktuPelimpahan"
           placeholder="Tuliskan waktu penyelesaian Pelimpahan Porsi Haji di sini..."
         ></textarea>
 
@@ -437,6 +570,7 @@
         </label>
 
         <textarea
+          id="waktuPelunasan"
           placeholder="Tuliskan waktu penyelesaian Pelunasan Haji di sini..."
         ></textarea>
 
@@ -445,18 +579,50 @@
     </section>
 
 
+    <!-- ========================================= -->
+    <!-- TOMBOL -->
+    <!-- ========================================= -->
+
     <div class="save-area">
 
-      <button class="save-button">
-        💾 Simpan Perubahan
-      </button>
+      <div class="button-group">
 
-      <div class="status">
-        Data akan dapat disimpan setelah sistem penyimpanan
-        kita hubungkan.
+        <button
+          type="button"
+          class="save-button"
+          onclick="simpanData()"
+        >
+          💾 Simpan Perubahan
+        </button>
+
+
+        <button
+          type="button"
+          class="load-button"
+          onclick="muatData()"
+        >
+          🔄 Muat Data Tersimpan
+        </button>
+
+
+        <button
+          type="button"
+          class="clear-button"
+          onclick="kosongkanForm()"
+        >
+          🗑️ Kosongkan Formulir
+        </button>
+
       </div>
 
+
+      <div
+        id="status"
+        class="status"
+      ></div>
+
     </div>
+
 
   </main>
 
@@ -470,6 +636,187 @@
     <p>Website Informasi dan Pelayanan Publik</p>
 
   </footer>
+
+
+  <!-- ========================================= -->
+  <!-- JAVASCRIPT PENYIMPANAN DATA -->
+  <!-- ========================================= -->
+
+  <script>
+
+    const namaPenyimpanan = "standarPelayananAcehBarat";
+
+
+    const daftarField = [
+
+      "persyaratanPendaftaran",
+      "persyaratanPembatalan",
+      "persyaratanPelimpahan",
+      "persyaratanPelunasan",
+
+      "prosedurPendaftaran",
+      "prosedurPembatalan",
+      "prosedurPelimpahan",
+      "prosedurPelunasan",
+
+      "waktuPendaftaran",
+      "waktuPembatalan",
+      "waktuPelimpahan",
+      "waktuPelunasan"
+
+    ];
+
+
+    function simpanData() {
+
+      const data = {};
+
+      daftarField.forEach(function(id) {
+
+        const field = document.getElementById(id);
+
+        data[id] = field.value;
+
+      });
+
+
+      localStorage.setItem(
+        namaPenyimpanan,
+        JSON.stringify(data)
+      );
+
+
+      tampilkanStatus(
+        "✅ Perubahan berhasil disimpan.",
+        false
+      );
+
+    }
+
+
+    function muatData() {
+
+      const dataTersimpan =
+        localStorage.getItem(namaPenyimpanan);
+
+
+      if (!dataTersimpan) {
+
+        tampilkanStatus(
+          "ℹ️ Belum ada data yang tersimpan.",
+          true
+        );
+
+        return;
+
+      }
+
+
+      const data = JSON.parse(dataTersimpan);
+
+
+      daftarField.forEach(function(id) {
+
+        const field = document.getElementById(id);
+
+        if (data[id] !== undefined) {
+
+          field.value = data[id];
+
+        }
+
+      });
+
+
+      tampilkanStatus(
+        "✅ Data tersimpan berhasil dimuat.",
+        false
+      );
+
+    }
+
+
+    function kosongkanForm() {
+
+      const yakin = confirm(
+        "Apakah Bapak yakin ingin mengosongkan seluruh formulir?"
+      );
+
+
+      if (!yakin) {
+
+        return;
+
+      }
+
+
+      daftarField.forEach(function(id) {
+
+        document.getElementById(id).value = "";
+
+      });
+
+
+      tampilkanStatus(
+        "Formulir telah dikosongkan. Data lama belum dihapus sampai Bapak menyimpan kembali.",
+        true
+      );
+
+    }
+
+
+    function tampilkanStatus(pesan, peringatan) {
+
+      const status =
+        document.getElementById("status");
+
+
+      status.textContent = pesan;
+
+
+      if (peringatan) {
+
+        status.classList.add("warning");
+
+      } else {
+
+        status.classList.remove("warning");
+
+      }
+
+
+      setTimeout(function() {
+
+        status.textContent = "";
+
+      }, 5000);
+
+    }
+
+
+    /*
+      Saat halaman dibuka,
+      data yang pernah disimpan akan otomatis dimuat.
+    */
+
+    window.addEventListener(
+      "DOMContentLoaded",
+      function() {
+
+        const dataTersimpan =
+          localStorage.getItem(namaPenyimpanan);
+
+
+        if (dataTersimpan) {
+
+          muatData();
+
+        }
+
+      }
+    );
+
+  </script>
 
 </body>
 </html>
