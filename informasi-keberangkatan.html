@@ -1,0 +1,574 @@
+```html
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Informasi Keberangkatan Haji | Kementerian Haji dan Umrah Kabupaten Aceh Barat</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f7f6;
+      color: #173f36;
+      line-height: 1.7;
+    }
+
+    .topbar {
+      background: #0d4036;
+      color: white;
+      padding: 10px 5%;
+      font-size: 14px;
+    }
+
+    header {
+      background: white;
+      padding: 18px 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .brand img {
+      width: 72px;
+      height: 72px;
+      object-fit: contain;
+    }
+
+    .brand h1 {
+      font-size: 22px;
+      line-height: 1.25;
+      color: #0b4439;
+      margin-bottom: 3px;
+    }
+
+    .brand p {
+      color: #55736c;
+      font-size: 15px;
+    }
+
+    .back {
+      display: inline-block;
+      background: #0d5143;
+      color: white;
+      padding: 10px 17px;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    .back:hover {
+      background: #006b3c;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #104c40, #237864);
+      color: white;
+      padding: 65px 5%;
+      text-align: center;
+    }
+
+    .hero .label {
+      color: #f5c95c;
+      font-weight: bold;
+      letter-spacing: 2px;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    .hero h2 {
+      font-size: 40px;
+      line-height: 1.2;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      max-width: 800px;
+      margin: auto;
+      font-size: 17px;
+      color: #edf7f3;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 850px;
+      margin: 50px auto;
+    }
+
+    .info-box {
+      background: #edf5f1;
+      border-left: 5px solid #dca82e;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 25px;
+    }
+
+    .info-box strong {
+      color: #0d5143;
+    }
+
+    .check-box {
+      background: white;
+      padding: 35px;
+      border-radius: 16px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+      border-top: 5px solid #dca82e;
+    }
+
+    .check-box h3 {
+      color: #0d5143;
+      font-size: 25px;
+      margin-bottom: 10px;
+    }
+
+    .check-box .description {
+      color: #5a6d68;
+      margin-bottom: 25px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      color: #0d5143;
+      margin-bottom: 8px;
+    }
+
+    .form-group small {
+      display: block;
+      color: #687872;
+      font-size: 13px;
+      margin-bottom: 8px;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 14px;
+      border: 1px solid #ccd9d4;
+      border-radius: 8px;
+      font-size: 16px;
+      font-family: Arial, Helvetica, sans-serif;
+      outline: none;
+    }
+
+    .form-group input:focus {
+      border-color: #1c6252;
+      box-shadow: 0 0 0 2px rgba(28, 98, 82, 0.10);
+    }
+
+    .btn-check {
+      width: 100%;
+      border: none;
+      background: #0d5143;
+      color: white;
+      padding: 14px 20px;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .btn-check:hover {
+      background: #006b3c;
+    }
+
+    .result {
+      display: none;
+      margin-top: 30px;
+      background: #f7faf8;
+      border: 1px solid #d8e5df;
+      border-radius: 12px;
+      padding: 25px;
+    }
+
+    .result h3 {
+      color: #0d5143;
+      margin-bottom: 18px;
+    }
+
+    .result-row {
+      padding: 10px 0;
+      border-bottom: 1px solid #e1e9e5;
+    }
+
+    .result-row:last-child {
+      border-bottom: none;
+    }
+
+    .result-row strong {
+      display: inline-block;
+      min-width: 230px;
+      color: #173f36;
+    }
+
+    .year {
+      font-size: 25px;
+      font-weight: bold;
+      color: #c99624;
+    }
+
+    .note {
+      margin-top: 20px;
+      padding: 14px;
+      background: #fff8e6;
+      border-left: 4px solid #dca82e;
+      color: #6f5a24;
+      font-size: 13px;
+      border-radius: 6px;
+    }
+
+    .back-area {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .back-link {
+      display: inline-block;
+      color: #0d5143;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #0d4036;
+      color: white;
+      padding: 35px 5%;
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    footer h3 {
+      color: #f5c95c;
+      margin-bottom: 8px;
+    }
+
+    footer p {
+      color: #dcebe6;
+      font-size: 14px;
+      margin: 3px 0;
+    }
+
+    @media (max-width: 700px) {
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .brand img {
+        width: 62px;
+        height: 62px;
+      }
+
+      .brand h1 {
+        font-size: 18px;
+      }
+
+      .brand p {
+        font-size: 13px;
+      }
+
+      .hero {
+        padding: 50px 5%;
+      }
+
+      .hero h2 {
+        font-size: 30px;
+      }
+
+      .container {
+        width: 92%;
+      }
+
+      .check-box {
+        padding: 25px 20px;
+      }
+
+      .result-row strong {
+        display: block;
+        min-width: auto;
+        margin-bottom: 3px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="topbar">
+    Website Informasi dan Pelayanan • Kabupaten Aceh Barat
+  </div>
+
+
+  <header>
+
+    <div class="brand">
+
+      <img
+        src="logo-kementerian-haji-umrah.png"
+        alt="Logo Kementerian Haji dan Umrah"
+      >
+
+      <div>
+        <h1>Kementerian Haji dan Umrah</h1>
+        <p>Kabupaten Aceh Barat</p>
+      </div>
+
+    </div>
+
+
+    <a href="layanan.html" class="back">
+      ← Kembali ke Layanan
+    </a>
+
+  </header>
+
+
+  <section class="hero">
+
+    <div class="label">
+      INFORMASI HAJI
+    </div>
+
+    <h2>
+      Informasi Keberangkatan Haji
+    </h2>
+
+    <p>
+      Periksa perkiraan tahun keberangkatan Haji
+      berdasarkan nomor porsi jemaah.
+    </p>
+
+  </section>
+
+
+  <main class="container">
+
+
+    <div class="info-box">
+
+      <strong>Informasi Penting</strong>
+
+      <p>
+        Silakan masukkan nomor porsi Haji Anda pada kolom
+        di bawah untuk melakukan pengecekan perkiraan
+        keberangkatan.
+      </p>
+
+    </div>
+
+
+    <section class="check-box">
+
+      <h3>
+        Cek Perkiraan Keberangkatan
+      </h3>
+
+      <p class="description">
+        Masukkan nomor porsi Haji dengan benar.
+      </p>
+
+
+      <div class="form-group">
+
+        <label for="nomorPorsi">
+          Nomor Porsi Haji
+        </label>
+
+        <small>
+          Masukkan nomor porsi sesuai dengan bukti pendaftaran Haji.
+        </small>
+
+        <input
+          type="text"
+          id="nomorPorsi"
+          inputmode="numeric"
+          maxlength="20"
+          placeholder="Contoh: 1100123456"
+        >
+
+      </div>
+
+
+      <button
+        type="button"
+        class="btn-check"
+        onclick="cekKeberangkatan()"
+      >
+        🔍 Cek Perkiraan Keberangkatan
+      </button>
+
+
+      <div
+        id="hasil"
+        class="result"
+      >
+
+        <h3>
+          Hasil Pengecekan
+        </h3>
+
+
+        <div class="result-row">
+
+          <strong>
+            Nomor Porsi
+          </strong>
+
+          <span id="hasilNomorPorsi">
+          </span>
+
+        </div>
+
+
+        <div class="result-row">
+
+          <strong>
+            Perkiraan Tahun Keberangkatan
+          </strong>
+
+          <span
+            id="hasilTahun"
+            class="year"
+          >
+          </span>
+
+        </div>
+
+
+        <div class="note">
+
+          <strong>Catatan:</strong>
+
+          Informasi yang ditampilkan merupakan
+          perkiraan dan dapat berubah sesuai dengan
+          ketentuan, kuota, serta kebijakan
+          penyelenggaraan ibadah Haji.
+
+        </div>
+
+      </div>
+
+
+      <div class="back-area">
+
+        <a
+          href="layanan.html"
+          class="back-link"
+        >
+          ← Kembali ke Menu Layanan
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+
+    <h3>
+      Kementerian Haji dan Umrah
+    </h3>
+
+    <p>
+      Kabupaten Aceh Barat
+    </p>
+
+    <p>
+      Website Informasi dan Pelayanan Publik
+    </p>
+
+  </footer>
+
+
+  <script>
+
+    function cekKeberangkatan() {
+
+      const input =
+        document.getElementById("nomorPorsi");
+
+      const nomorPorsi =
+        input.value.trim();
+
+
+      if (nomorPorsi === "") {
+
+        alert(
+          "Silakan masukkan nomor porsi Haji terlebih dahulu."
+        );
+
+        input.focus();
+
+        return;
+      }
+
+
+      if (!/^\d+$/.test(nomorPorsi)) {
+
+        alert(
+          "Nomor porsi hanya boleh berisi angka."
+        );
+
+        input.focus();
+
+        return;
+      }
+
+
+      /*
+        ==================================================
+        TAHAP AWAL
+        ==================================================
+
+        Untuk sementara halaman hanya menampilkan
+        nomor porsi yang dimasukkan.
+
+        Data tahun keberangkatan BELUM dibuat
+        berdasarkan perkiraan atau perhitungan sembarang.
+
+        Setelah sumber data resmi ditentukan,
+        bagian ini akan kita sambungkan dengan data
+        perkiraan keberangkatan yang benar.
+      */
+
+
+      document.getElementById(
+        "hasilNomorPorsi"
+      ).textContent = nomorPorsi;
+
+
+      document.getElementById(
+        "hasilTahun"
+      ).textContent = "Belum tersedia";
+
+
+      document.getElementById(
+        "hasil"
+      ).style.display = "block";
+
+    }
+
+  </script>
+
+</body>
+</html>
+```
