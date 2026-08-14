@@ -1,0 +1,562 @@
+```html
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kelola Informasi Umrah | Kementerian Haji dan Umrah Kabupaten Aceh Barat</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f7f6;
+            color: #173f36;
+            line-height: 1.7;
+        }
+
+        .topbar {
+            background: #0d4036;
+            color: white;
+            padding: 10px 5%;
+            font-size: 14px;
+        }
+
+        header {
+            background: white;
+            padding: 18px 5%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 25px;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .brand img {
+            width: 72px;
+            height: 72px;
+            object-fit: contain;
+        }
+
+        .brand h1 {
+            font-size: 22px;
+            line-height: 1.25;
+            color: #0b4439;
+            margin-bottom: 3px;
+        }
+
+        .brand p {
+            color: #55736c;
+            font-size: 15px;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: #0b1715;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #c99624;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #104c40, #237864);
+            color: white;
+            padding: 55px 5%;
+            text-align: center;
+        }
+
+        .hero .label {
+            color: #f5c95c;
+            font-weight: bold;
+            letter-spacing: 2px;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .hero h2 {
+            font-size: 38px;
+            line-height: 1.2;
+            margin-bottom: 12px;
+        }
+
+        .hero p {
+            max-width: 800px;
+            margin: auto;
+            font-size: 16px;
+            color: #edf7f3;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 900px;
+            margin: 50px auto;
+        }
+
+        .box {
+            background: white;
+            padding: 35px;
+            border-radius: 16px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+            border-top: 5px solid #dca82e;
+        }
+
+        .box h3 {
+            color: #0d5143;
+            font-size: 26px;
+            margin-bottom: 10px;
+        }
+
+        .box > p {
+            color: #5a6d68;
+            font-size: 15px;
+            margin-bottom: 30px;
+        }
+
+        .field {
+            margin-bottom: 25px;
+        }
+
+        .field label {
+            display: block;
+            font-weight: bold;
+            color: #0d5143;
+            margin-bottom: 7px;
+            font-size: 16px;
+        }
+
+        .field small {
+            display: block;
+            color: #71817c;
+            margin-bottom: 8px;
+            font-size: 13px;
+        }
+
+        textarea {
+            width: 100%;
+            min-height: 150px;
+            padding: 14px;
+            border: 1px solid #cbd8d3;
+            border-radius: 8px;
+            resize: vertical;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            line-height: 1.7;
+            color: #173f36;
+            background: #ffffff;
+            outline: none;
+        }
+
+        textarea:focus {
+            border-color: #0d5143;
+            box-shadow: 0 0 0 2px rgba(13,81,67,0.10);
+        }
+
+        .tombol {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        button,
+        .btn-lihat {
+            border: none;
+            padding: 12px 22px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 14px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-simpan {
+            background: #006b3c;
+            color: white;
+        }
+
+        .btn-simpan:hover {
+            background: #004d2b;
+        }
+
+        .btn-hapus {
+            background: #b33a3a;
+            color: white;
+        }
+
+        .btn-hapus:hover {
+            background: #8f2929;
+        }
+
+        .btn-lihat {
+            background: #dca82e;
+            color: #173f36;
+        }
+
+        .btn-lihat:hover {
+            background: #c99624;
+        }
+
+        .pesan {
+            display: none;
+            margin-top: 20px;
+            padding: 14px 18px;
+            border-radius: 8px;
+            background: #eaf5ef;
+            border-left: 4px solid #006b3c;
+            color: #315d4d;
+            font-size: 14px;
+        }
+
+        footer {
+            background: #0d4036;
+            color: white;
+            padding: 35px 5%;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        footer h3 {
+            color: #f5c95c;
+            margin-bottom: 8px;
+        }
+
+        footer p {
+            color: #dcebe6;
+            font-size: 14px;
+            margin: 3px 0;
+        }
+
+        @media (max-width: 700px) {
+
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav {
+                width: 100%;
+                gap: 14px;
+            }
+
+            .brand h1 {
+                font-size: 18px;
+            }
+
+            .hero h2 {
+                font-size: 30px;
+            }
+
+            .container {
+                width: 92%;
+            }
+
+            .box {
+                padding: 24px;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="topbar">
+        Halaman Pengelolaan • Kabupaten Aceh Barat
+    </div>
+
+
+    <header>
+
+        <div class="brand">
+
+            <img
+                src="logo-kementerian-haji-umrah.png"
+                alt="Logo Kementerian Haji dan Umrah"
+            >
+
+            <div>
+
+                <h1>Kementerian Haji dan Umrah</h1>
+
+                <p>Kabupaten Aceh Barat</p>
+
+            </div>
+
+        </div>
+
+
+        <nav>
+
+            <a href="index.html">Beranda</a>
+
+            <a href="layanan.html">Layanan</a>
+
+            <a href="informasi-umrah.html">Informasi Umrah</a>
+
+        </nav>
+
+    </header>
+
+
+    <section class="hero">
+
+        <div class="label">
+            KELOLA INFORMASI UMRAH
+        </div>
+
+        <h2>
+            Kelola Informasi Umrah
+        </h2>
+
+        <p>
+            Silakan isi atau ubah informasi yang akan
+            ditampilkan pada halaman Informasi Umrah.
+        </p>
+
+    </section>
+
+
+    <main class="container">
+
+        <div class="box">
+
+            <h3>
+                Informasi Umrah
+            </h3>
+
+            <p>
+                Tulis informasi yang ingin ditampilkan
+                kepada masyarakat. Setelah selesai,
+                tekan tombol <strong>Simpan Informasi</strong>.
+            </p>
+
+
+            <div class="field">
+
+                <label>
+                    Informasi Umrah
+                </label>
+
+                <small>
+                    Tuliskan informasi Umrah yang ingin
+                    ditampilkan kepada masyarakat.
+                </small>
+
+                <textarea
+                    id="informasiUmrah"
+                    placeholder="Tuliskan informasi Umrah di sini..."
+                ></textarea>
+
+            </div>
+
+
+            <div class="tombol">
+
+                <button
+                    type="button"
+                    class="btn-simpan"
+                    onclick="simpanInformasi()"
+                >
+                    💾 Simpan Informasi
+                </button>
+
+
+                <button
+                    type="button"
+                    class="btn-hapus"
+                    onclick="hapusInformasi()"
+                >
+                    🗑 Hapus
+                </button>
+
+
+                <a
+                    href="informasi-umrah.html"
+                    class="btn-lihat"
+                >
+                    👁 Lihat Halaman Masyarakat
+                </a>
+
+            </div>
+
+
+            <div
+                id="pesan"
+                class="pesan"
+            ></div>
+
+        </div>
+
+    </main>
+
+
+    <footer>
+
+        <h3>Kementerian Haji dan Umrah</h3>
+
+        <p>Kabupaten Aceh Barat</p>
+
+        <p>Halaman Pengelolaan Informasi Umrah</p>
+
+    </footer>
+
+
+    <script>
+
+        /* ==========================================
+           MEMUAT DATA YANG SUDAH TERSIMPAN
+        ========================================== */
+
+        function muatInformasi() {
+
+            const data =
+                localStorage.getItem("informasiUmrah");
+
+            if (data) {
+
+                document.getElementById("informasiUmrah").value = data;
+
+            }
+
+        }
+
+
+        /* ==========================================
+           MENYIMPAN INFORMASI
+        ========================================== */
+
+        function simpanInformasi() {
+
+            const informasi =
+                document.getElementById("informasiUmrah").value.trim();
+
+
+            if (informasi === "") {
+
+                tampilkanPesan(
+                    "Silakan tuliskan informasi terlebih dahulu.",
+                    false
+                );
+
+                return;
+            }
+
+
+            localStorage.setItem(
+                "informasiUmrah",
+                informasi
+            );
+
+
+            tampilkanPesan(
+                "Informasi Umrah berhasil disimpan.",
+                true
+            );
+
+        }
+
+
+        /* ==========================================
+           MENGHAPUS INFORMASI
+        ========================================== */
+
+        function hapusInformasi() {
+
+            const yakin =
+                confirm(
+                    "Apakah Anda yakin ingin menghapus informasi Umrah?"
+                );
+
+
+            if (!yakin) {
+                return;
+            }
+
+
+            localStorage.removeItem(
+                "informasiUmrah"
+            );
+
+
+            document.getElementById(
+                "informasiUmrah"
+            ).value = "";
+
+
+            tampilkanPesan(
+                "Informasi Umrah telah dihapus.",
+                true
+            );
+
+        }
+
+
+        /* ==========================================
+           PESAN
+        ========================================== */
+
+        function tampilkanPesan(teks, berhasil) {
+
+            const pesan =
+                document.getElementById("pesan");
+
+            pesan.textContent = teks;
+
+            pesan.style.display = "block";
+
+            if (!berhasil) {
+
+                pesan.style.background = "#fff3f3";
+                pesan.style.borderLeftColor = "#b33a3a";
+                pesan.style.color = "#8f2929";
+
+            } else {
+
+                pesan.style.background = "#eaf5ef";
+                pesan.style.borderLeftColor = "#006b3c";
+                pesan.style.color = "#315d4d";
+
+            }
+
+
+            setTimeout(function() {
+
+                pesan.style.display = "none";
+
+            }, 4000);
+
+        }
+
+
+        /* JALANKAN SAAT HALAMAN DIBUKA */
+
+        muatInformasi();
+
+    </script>
+
+</body>
+</html>
+```
